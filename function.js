@@ -84,16 +84,16 @@ document.querySelectorAll('nav .right button').forEach(button => {
     document.getElementById('aboutme').textContent = t.aboutMe;
     document.getElementById('hero-text').textContent = t.occupation;
     document.getElementById('skills-heading').textContent = t.skillsHeading;
+    document.getElementById('experience-title').experience = t.experienceTitle;
     document.getElementById('contact-heading').textContent = t.contactHeading;
     document.getElementById('contact-text').textContent = t.contactText;
-  
     localStorage.setItem('siteLanguage', lang);
   }
 
   const saved = localStorage.getItem('siteLanguage');
   if (saved) switchLanguage(saved);
 
-
+// fix experience title and skills
   const translations = {
     en: {
       heroHeading: "Hi, I'm Bedirhan.",
@@ -101,6 +101,7 @@ document.querySelectorAll('nav .right button').forEach(button => {
       aboutMe: "Since I was around 14 year old I studied C#, Python, Java, JavaScript and similar languages and currently I am a 2nd year student at MEF University. In future I am planning to study more on cybersecurity field and get my master's license from Virginia Commonwealth University.",
       occupation: "Welcome to my portfolio site.",
       skillsHeading: "Skills",
+      experienceTitle: "Experience",
       contactHeading: "Contact",
       contactText: "Feel free to get in touch!"
     },
@@ -110,6 +111,7 @@ document.querySelectorAll('nav .right button').forEach(button => {
       aboutMe: "Çocukluğumdan itibaren C#, Python, Java, JavaScript ve benzeri dillerde kendimi geliştirdim ve şu anda MEF Üniversitesinde 2. Sınıf öğrencisiyim. Gelecekte kendimi sibergüvenlik dalında daha fazla geliştirmek ve Virginia Commonwealth Üniversitesinden Master diploması almayı planlıyorum.",
       occupation: "Portföy siteme hoş geldiniz.",
       skillsHeading: "Yetenekler",
+      experienceTitle: "Deneyim",
       contactHeading: "İletişim",
       contactText: "Benimle iletişime geçmekten çekinmeyin!"
     },
@@ -119,6 +121,7 @@ document.querySelectorAll('nav .right button').forEach(button => {
       aboutMe: "幼い頃からC#、Python、Java、JavaScriptなどの言語を学び、現在はMEF大学の2年生です。将来はサイバーセキュリティ分野をさらに学び、バージニア・コモンウェルス大学で修士号を取得したいと考えています。",
       occupation: "私のポートフォリオサイトへようこそ。",
       skillsHeading: "スキル",
+      experienceTitle: "Experience",
       contactHeading: "連絡先",
       contactText: "お気軽にご連絡ください！"
     }

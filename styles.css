@@ -266,12 +266,26 @@ nav .right a span{
 
 /* Experience */
 
+
+
+.split {
+    display: flex;
+    gap: 70px;            
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+  
+.split .experience-section,
+.split .about-me-section{
+    flex: 1;
+}
 .experience-section{
     padding: 50px 50px;
     text-align: center;
 }
 
 .experience-section h2{
+    padding: 20px 0;
     font-size: 35px;
 }
 
