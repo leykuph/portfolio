@@ -1,207 +1,206 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Bedirhan | Certifications</title>
+<title>Certifications | Cybersecurity &amp; Engineering Portfolio</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#AF87D7",
-                        "background-light": "#f7f6f8",
-                        "background-dark": "#19141e",
-                        "surface": "#221C34",
-                        "surface-accent": "#2A2342",
-                        "link-orange": "#E19B5A",
-                        "text-main": "#F5F0FA",
-                    },
-                    fontFamily: {
-                        "display": ["Public Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "full": "9999px"
-                    },
-                },
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#AF87D7",
+                "accent-orange": "#E19B5A",
+                "background-light": "#f7f6f8",
+                "background-dark": "#1A1626",
+                "surface-dark": "#221C34",
+              },
+              fontFamily: {
+                "display": ["Public Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
             },
+          },
         }
     </script>
 <style>
         body {
             font-family: 'Public Sans', sans-serif;
         }
-        .search-focus:focus-within {
-            border-color: #AF87D7;
-            box-shadow: 0 0 0 2px rgba(175, 135, 215, 0.2);
+        .card-border-glow {
+            border: 1px solid rgba(175, 135, 215, 0.15);
+            transition: all 0.3s ease;
         }
-        .card-hover:hover {
-            transform: translateY(-4px);
+        .card-border-glow:hover {
             border-color: rgba(175, 135, 215, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .search-shadow {
+            box-shadow: 0 0 20px rgba(175, 135, 215, 0.1);
+        }
+        .custom-slider {
+            width: 48px;
+            height: 24px;
+            background: #2D263F;
+            border-radius: 12px;
+            position: relative;
+            cursor: pointer;
+        }
+        .custom-slider::after {
+            content: '';
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            background: #AF87D7;
+            border-radius: 50%;
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-main min-h-screen font-display">
-<!-- Header / Navigation -->
-<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<nav class="sticky top-0 z-50 border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 <div class="flex items-center gap-2">
-<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xl">B</div>
-<span class="text-xl font-bold tracking-tight uppercase">Bedirhan</span>
+<span class="font-bold text-xl tracking-tight">Dev<span class="text-primary">Sec</span>.</span>
 </div>
-<nav class="flex items-center gap-8">
-<a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors font-medium" href="#">Home</a>
-<a class="text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="#">Certifications</a>
-<a class="px-5 py-2 rounded-lg bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-all font-medium" href="#">Contact</a>
+<div class="hidden md:flex items-center gap-8 font-medium text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="#">Certifications</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3">
+<span class="material-icons text-sm opacity-50">light_mode</span>
+<div class="custom-slider"></div>
+<span class="material-icons text-sm text-primary">dark_mode</span>
+</div>
+<div class="flex bg-surface-dark/50 dark:bg-surface-dark border border-primary/10 rounded-full p-1">
+<button class="px-3 py-1 rounded-full text-xs font-bold bg-primary text-white">EN</button>
+<button class="px-3 py-1 rounded-full text-xs font-bold text-slate-400 hover:text-white">TR</button>
+<button class="px-3 py-1 rounded-full text-xs font-bold text-slate-400 hover:text-white">JP</button>
+</div>
+</div>
+</div>
 </nav>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<header class="text-left mb-16 space-y-8">
+<div class="space-y-2">
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight">Professional <span class="text-primary">Certifications</span></h1>
+<p class="text-slate-400 max-w-2xl">Validate my expertise across cybersecurity frameworks, cloud infrastructure, and software engineering standards.</p>
+</div>
+<div class="relative max-w-xl">
+<span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-primary">search</span>
+<input class="w-full bg-surface-dark/50 dark:bg-surface-dark border border-primary/20 rounded-full py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none search-shadow placeholder:text-slate-500 transition-all" placeholder="Search certifications (e.g. 'Network', 'Python')..." type="text"/>
 </div>
 </header>
-<main class="max-w-7xl mx-auto px-6 py-12">
-<!-- Hero & Search Section -->
-<section class="mb-16">
-<div class="max-w-2xl">
-<h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Achievements &amp; <span class="text-primary">Certifications</span></h1>
-<p class="text-lg text-slate-500 dark:text-slate-400 mb-10 leading-relaxed">
-                    A curated collection of my professional milestones and technical certifications in the field of Cybersecurity and Computer Engineering.
-                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-surface-dark p-6 rounded-xl card-border-glow flex justify-between items-start gap-4">
+<div class="space-y-4 flex-1">
+<div>
+<h3 class="font-bold text-lg leading-tight mb-1">CompTIA Security+</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium">CompTIA</p>
 </div>
-<div class="relative max-w-2xl search-focus border-2 border-primary/20 rounded-xl bg-surface-accent transition-all">
-<div class="flex items-center px-4 py-3">
-<span class="material-icons text-slate-400 mr-3">search</span>
-<input class="w-full bg-transparent border-none focus:ring-0 text-text-main placeholder:text-slate-500 text-lg" placeholder="Search certifications (e.g. Security+, Cisco, Cloud)..." type="text"/>
-<button class="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:0 transition-opacity ml-2">
-                        Find
-                    </button>
-</div>
-</div>
-</section>
-<!-- Certifications Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Card 1 -->
-<div class="bg-surface border border-primary/5 rounded-xl p-8 card-hover transition-all flex flex-col h-full shadow-xl shadow-black/20">
-<div class="mb-6">
-<div class="w-16 h-16 rounded-xl bg-background-dark flex items-center justify-center overflow-hidden border border-primary/20">
-<img alt="Company Logo" class="w-10 h-10 object-contain" data-alt="Modern tech company logo icon minimalist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd1vQJOOZj7LWmz8hO1cm1mXTzcxGtUqSBVfAz2-tCj1IMSITEEaAYYvCsU9ZagQF1TTcsZS1xwPCRj2IqzXKTzto-6Y8mMx6gMR7beI7ueXfJNoEXlHccsv43UsjwctXbUNfE47vCzbg92Gtq1hHonFJXcAHll6YGOABdvt38dwPGTYeBr3LhuVNH4_mbC68euiL5xO8i5njUXUbYemGeKzQ6W3ozbJcFrvFIxn1GhUQme-h1sqNnCh6Rfj9ZEmCPd5QDoz4pq8c"/>
-</div>
-</div>
-<div class="flex-grow">
-<span class="text-xs font-bold text-primary uppercase tracking-widest mb-2 block">CompTIA</span>
-<h3 class="text-2xl font-bold text-text-main mb-3 leading-tight">Security+ Certification</h3>
-<p class="text-slate-400 text-sm mb-6 leading-relaxed">Validated baseline skills for a cybersecurity career, including risk assessment and incident response.</p>
-</div>
-<div class="flex items-center justify-between pt-6 border-t border-primary/10">
-<span class="text-xs text-slate-500 font-medium italic">Issued Jun 2023</span>
-<a class="text-link-orange font-bold hover:underline inline-flex items-center gap-1" href="#">
-                        View Certificate <span class="material-icons text-sm">open_in_new</span>
+<a class="inline-flex items-center gap-1 text-accent-orange font-semibold text-sm hover:underline" href="#">
+                    View Certificate 
+                    <span class="material-icons text-xs">open_in_new</span>
 </a>
 </div>
-</div>
-<!-- Card 2 -->
-<div class="bg-surface border border-primary/5 rounded-xl p-8 card-hover transition-all flex flex-col h-full shadow-xl shadow-black/20">
-<div class="mb-6">
-<div class="w-16 h-16 rounded-xl bg-background-dark flex items-center justify-center overflow-hidden border border-primary/20">
-<img alt="Company Logo" class="w-10 h-10 object-contain" data-alt="Professional certification body logo mark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW85ta5Nt4C3xQwRMY8FQFZN5xEl8_0U6MvNy2Bp6tF4O8grigagk8Sf2jjtxz-ZRGYNKKqMddu6h0jOz6yIExH4rTlxPjSnVttNCK1URpudNQOqJ5Di-yVcxkud2zG07F0RC6cElNm5dCpU-DKieu-f_11UTfzo2O1TAgHWUXrs_O77v0B5PkVAtKPCBDw2lSv2NcdIFxW4pziIIsrWg1JgZQ3Eb6WY4C6_WU5SBbeIQz9tOG_ReJd1LrPT9cSnxdu9altjTo_VY"/>
+<div class="w-16 h-16 bg-primary/5 rounded-lg flex items-center justify-center overflow-hidden shrink-0 border border-primary/10">
+<img class="w-10 h-10 object-contain grayscale opacity-80 brightness-150" data-alt="Cybersecurity badge or certification logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFhEDrIIoDMxMwyjGWKJn9ED2xAcrxNgxF9xNgRwYkbl-AuqYS_tYGWN-kty5yV-vDTTzfidcxXDrAzUpJkvxR3yzyBtovKT0QU-OYs0tgk-Bf8mnB8sYm4BGCx8M0q-beSiG7Vay3gxVH4XaEZzABaWJId7yDm1Vt7CeP9bEMPYgmGsEoZNULSb6E42iQbxo_veX9CeILHQc8jUkIsusHJfCtjw2-CpK6PtMiy_v2Io3ruZZjNt9i2XxTU-vYIR7KSP0ciOB_XdM"/>
 </div>
 </div>
-<div class="flex-grow">
-<span class="text-xs font-bold text-primary uppercase tracking-widest mb-2 block">EC-Council</span>
-<h3 class="text-2xl font-bold text-text-main mb-3 leading-tight">Certified Ethical Hacker (CEH)</h3>
-<p class="text-slate-400 text-sm mb-6 leading-relaxed">Advanced offensive security training focusing on latest hacking tools and techniques.</p>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-xl card-border-glow flex justify-between items-start gap-4">
+<div class="space-y-4 flex-1">
+<div>
+<h3 class="font-bold text-lg leading-tight mb-1">IBM Cybersecurity Analyst</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium">IBM Professional</p>
 </div>
-<div class="flex items-center justify-between pt-6 border-t border-primary/10">
-<span class="text-xs text-slate-500 font-medium italic">Issued Dec 2023</span>
-<a class="text-link-orange font-bold hover:underline inline-flex items-center gap-1" href="#">
-                        View Certificate <span class="material-icons text-sm">open_in_new</span>
+<a class="inline-flex items-center gap-1 text-accent-orange font-semibold text-sm hover:underline" href="#">
+                    View Certificate 
+                    <span class="material-icons text-xs">open_in_new</span>
 </a>
 </div>
-</div>
-<!-- Card 3 -->
-<div class="bg-surface border border-primary/5 rounded-xl p-8 card-hover transition-all flex flex-col h-full shadow-xl shadow-black/20">
-<div class="mb-6">
-<div class="w-16 h-16 rounded-xl bg-background-dark flex items-center justify-center overflow-hidden border border-primary/20">
-<img alt="Company Logo" class="w-10 h-10 object-contain" data-alt="Cisco networking academy stylized logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3YNyRysJ4wTTjCJBuZFUHp0y8w5nrHsoRDXvBvFpAu4tEmy3qaZzbwVKHqb9ZM6Sga-6jwA2YVzw2gO2_B6F5Gm6r_J5HEG9onZL6PxCmPmVO_U6A-NkJAI_-7Z0-gG9oYxy3x8GkXlC8qXXOh9PJAHlNZ76HtR8R0cTqNsEpzoPbJm76078KmNbOJkDK8P2JCs8hLXc0ujMsGrBSqkNAWwdhDoAnzqBOLrreuZBbhihGzFvVRQTCpbMm6RBfKWbTfdi8Jc85Wck"/>
+<div class="w-16 h-16 bg-primary/5 rounded-lg flex items-center justify-center overflow-hidden shrink-0 border border-primary/10">
+<img class="w-10 h-10 object-contain grayscale opacity-80 brightness-150" data-alt="Professional computer engineering logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUgdEivU3y3IRuBlue9DR2JvISB8rPsq8VHiAuxIDV_oNvePs0_zAcWo1UmD8O1sLJa08Ut5wiOE1lCeVbSMjAs64KSIDTCzsjj_ibG7WDhMVdhLu_alEI24lT1KmDF8wU6Y769paW10nFOMe52E1xl0dxy5kKs94nKvdIuaNaUVWNWJ9xZaLxPv-G_Q1E_G4etIr9i21pe4anOvai6q-z_SMQmRYUe_ipsmNxTWHiq1SnDbH2JGBwUrHzciFz-ndmAbmyDU47wtQ"/>
 </div>
 </div>
-<div class="flex-grow">
-<span class="text-xs font-bold text-primary uppercase tracking-widest mb-2 block">Cisco</span>
-<h3 class="text-2xl font-bold text-text-main mb-3 leading-tight">Introduction to Cybersecurity</h3>
-<p class="text-slate-400 text-sm mb-6 leading-relaxed">Foundational knowledge covering networking security, cryptography, and organizational safety.</p>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-xl card-border-glow flex justify-between items-start gap-4">
+<div class="space-y-4 flex-1">
+<div>
+<h3 class="font-bold text-lg leading-tight mb-1">AWS Solutions Architect</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Amazon Web Services</p>
 </div>
-<div class="flex items-center justify-between pt-6 border-t border-primary/10">
-<span class="text-xs text-slate-500 font-medium italic">Issued Mar 2022</span>
-<a class="text-link-orange font-bold hover:underline inline-flex items-center gap-1" href="#">
-                        View Certificate <span class="material-icons text-sm">open_in_new</span>
+<a class="inline-flex items-center gap-1 text-accent-orange font-semibold text-sm hover:underline" href="#">
+                    View Certificate 
+                    <span class="material-icons text-xs">open_in_new</span>
 </a>
 </div>
-</div>
-<!-- Card 4 -->
-<div class="bg-surface border border-primary/5 rounded-xl p-8 card-hover transition-all flex flex-col h-full shadow-xl shadow-black/20">
-<div class="mb-6">
-<div class="w-16 h-16 rounded-xl bg-background-dark flex items-center justify-center overflow-hidden border border-primary/20">
-<img alt="Company Logo" class="w-10 h-10 object-contain" data-alt="Abstract technology cloud computing icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOFLnlrbeOJkruxDFiHI-50WWQCGN_uGwKzIkWv9F3malBUJ3_i8l8J7YHIQUzPsRl16snK0YpGFNaP0lTv4Pn_mf2z4BisewNvpvFCB1HHSfJEMm9zIHJcKrF62wm6evCAFX-SaT4F8lWrCyA7rlC6qWNN-3ntp2JQMu5r5pgSUpblUJ90RQRGqh6VZVBH4H2W4EeeJOL1g8ciJ0QBT0hL3aMWa3a4_GVhTBK7N_mmxwURbBGbM5aPMEqY10phgZO1_pM0sdNfmE"/>
+<div class="w-16 h-16 bg-primary/5 rounded-lg flex items-center justify-center overflow-hidden shrink-0 border border-primary/10">
+<img class="w-10 h-10 object-contain grayscale opacity-80 brightness-150" data-alt="Cloud technology abstract logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMX40mUwfIs0mgwAy58aAWFfkuRVLBc1vy6S3225XdfXVKc-UxiBh6aCR4tpMxS7qlSi3FtMYjACPoTaZ0e1bzdj7smY9lOJAyMc5qfTTJilKfD3Dwpun2Yf09bZchasBUImpZ6wycRTzAmIYGjwPvB13OtQcra7hte13t4VaMEpN1l-Kf-3CrhohckvQiaFhHpjRrDvP7xvWNBlSpvRdddZ802Jt3btBxnN5OyQfKHNslqKy2jO8B9eaHGdhestwYo5kORdbygtE"/>
 </div>
 </div>
-<div class="flex-grow">
-<span class="text-xs font-bold text-primary uppercase tracking-widest mb-2 block">AWS</span>
-<h3 class="text-2xl font-bold text-text-main mb-3 leading-tight">Cloud Practitioner</h3>
-<p class="text-slate-400 text-sm mb-6 leading-relaxed">Comprehensive overview of cloud concepts, security, technology, and billing models.</p>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-xl card-border-glow flex justify-between items-start gap-4">
+<div class="space-y-4 flex-1">
+<div>
+<h3 class="font-bold text-lg leading-tight mb-1">Google IT Support</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Google / Coursera</p>
 </div>
-<div class="flex items-center justify-between pt-6 border-t border-primary/10">
-<span class="text-xs text-slate-500 font-medium italic">Issued Aug 2023</span>
-<a class="text-link-orange font-bold hover:underline inline-flex items-center gap-1" href="#">
-                        View Certificate <span class="material-icons text-sm">open_in_new</span>
+<a class="inline-flex items-center gap-1 text-accent-orange font-semibold text-sm hover:underline" href="#">
+                    View Certificate 
+                    <span class="material-icons text-xs">open_in_new</span>
 </a>
 </div>
-</div>
-<!-- Card 5 -->
-<div class="bg-surface border border-primary/5 rounded-xl p-8 card-hover transition-all flex flex-col h-full shadow-xl shadow-black/20">
-<div class="mb-6">
-<div class="w-16 h-16 rounded-xl bg-background-dark flex items-center justify-center overflow-hidden border border-primary/20">
-<img alt="Company Logo" class="w-10 h-10 object-contain" data-alt="Google developer training logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQzoEJUlkeWbn3m7zJtsVMVdLfqsVuE9kwREdFmcKPxLjOYtEEhuOjFX9gM7OgshlhcspLdsfcoroXLat0FXAgTrEUskaZJZW57_R2ZBzTaTUoNy7FFpGw7lD0p-0AGvrgf71lTke5zH02RU5y4TbNcA7YAq4Vf9bG5z4EVkr1ixRlhyIdVNxU_IXpjPwk_kpZzHfdIvQzhS6pUOlSauHmHhHGV2nE7-H5lW-FHsE5qMaU4NMPlLTxFTURYFprr1gW9Eh1xepm5zw"/>
+<div class="w-16 h-16 bg-primary/5 rounded-lg flex items-center justify-center overflow-hidden shrink-0 border border-primary/10">
+<img class="w-10 h-10 object-contain grayscale opacity-80 brightness-150" data-alt="Google company brand icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy86Tzg-3k_yprbK9RCunBM5xjJ0H1QYFRgGkCx9Xy9mlorDnL1bwSzf2Fnt3Pq3iN4PlyxR2mYB_dOeRQbKGRUBK3OUGXaF_mZxanyo-aNhioZ05mHhKB1p2mwMgni77Itr92UFRI_TfLTPnGdEqvCibGSSLBB5pF_ZDkIqOq7qAqrx46O8YeOf86pN4CtQAcgICLlqEZk2duYFQWB1QRsLcg5zXy2wU0f5TiBfxKGOj0hpgxzBLxtCdvGAGVBUJ1hn8vTzEYDKU"/>
 </div>
 </div>
-<div class="flex-grow">
-<span class="text-xs font-bold text-primary uppercase tracking-widest mb-2 block">Google</span>
-<h3 class="text-2xl font-bold text-text-main mb-3 leading-tight">Cybersecurity Certificate</h3>
-<p class="text-slate-400 text-sm mb-6 leading-relaxed">Hands-on experience with Python, Linux, and SQL for security analyst workflows.</p>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-xl card-border-glow flex justify-between items-start gap-4">
+<div class="space-y-4 flex-1">
+<div>
+<h3 class="font-bold text-lg leading-tight mb-1">Certified Ethical Hacker</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium">EC-Council</p>
 </div>
-<div class="flex items-center justify-between pt-6 border-t border-primary/10">
-<span class="text-xs text-slate-500 font-medium italic">Issued Jan 2024</span>
-<a class="text-link-orange font-bold hover:underline inline-flex items-center gap-1" href="#">
-                        View Certificate <span class="material-icons text-sm">open_in_new</span>
+<a class="inline-flex items-center gap-1 text-accent-orange font-semibold text-sm hover:underline" href="#">
+                    View Certificate 
+                    <span class="material-icons text-xs">open_in_new</span>
 </a>
 </div>
-</div>
-<!-- Card 6 (Empty/Placeholder State) -->
-<div class="bg-surface border border-primary/5 border-dashed rounded-xl p-8 flex flex-col items-center justify-center text-center opacity-60">
-<div class="w-16 h-16 rounded-full bg-surface-accent flex items-center justify-center mb-4">
-<span class="material-icons text-primary">add</span>
-</div>
-<h3 class="text-xl font-bold text-text-main mb-2">More Coming Soon</h3>
-<p class="text-slate-400 text-sm">Actively pursuing OSCP and Cloud Security certifications.</p>
+<div class="w-16 h-16 bg-primary/5 rounded-lg flex items-center justify-center overflow-hidden shrink-0 border border-primary/10">
+<img class="w-10 h-10 object-contain grayscale opacity-80 brightness-150" data-alt="Ethical hacker or security logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTLHjIMnXgGcANdieXlSTPqOZPIxCJw2fv0ykBfgKz_SQHy5erfXVN3h2OOCuAFymaObBR3gDuqQ5I-L_Oe9pYkc-rBF1znGyaITdICndrGwb9q487q_t5zPEznU1H5qd0cM_qVuJyac-uRqieJWWYR1cCO_tZWuTC6U6NMYIghkpyVQh8QJ2E9mxJyK-vMy_M9irPs4LaJjKT-05iB9MhZzGqQg_21fveEo-snH-ZmiUn68mj0eGOclTYB38Wx8IJ4nCowelF1sA"/>
 </div>
 </div>
-<!-- Footer -->
-<footer class="mt-24 pt-12 border-t border-primary/10 flex flex-col md:flex-row items-center justify-between gap-6 pb-12">
-<div class="text-slate-500 text-sm">
-                © 2024 Bedirhan Portfolio. Built for Cybersecurity Excellence.
-            </div>
-<div class="flex items-center gap-6">
-<a class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center hover:bg-primary/20 transition-colors text-slate-400 hover:text-primary" href="#">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-xl card-border-glow flex justify-between items-start gap-4">
+<div class="space-y-4 flex-1">
+<div>
+<h3 class="font-bold text-lg leading-tight mb-1">Python for Cyber</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium">SANS Institute</p>
+</div>
+<a class="inline-flex items-center gap-1 text-accent-orange font-semibold text-sm hover:underline" href="#">
+                    View Certificate 
+                    <span class="material-icons text-xs">open_in_new</span>
 </a>
-<a class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center hover:bg-primary/20 transition-colors text-slate-400 hover:text-primary" href="#">
-<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-</a>
+</div>
+<div class="w-16 h-16 bg-primary/5 rounded-lg flex items-center justify-center overflow-hidden shrink-0 border border-primary/10">
+<img class="w-10 h-10 object-contain grayscale opacity-80 brightness-150" data-alt="Programming language python symbol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSXXRv31Lw_4BGPf7af6iv3RwaxE7CqxgfdRuO_SP4za1e9gGfIrv7R3LgHK7EBJQIEIMdK1fVsjrPcMNMiZLUQA6joh7WI-CF0Y-LlmbRIeYe_6YWx6mzui7Vu1oShjz1RydUYSvx5YNE9-VznQByQtI8O-EGS7-3EBorPws-Auu6k9lulWUnSPzV30ZSvJnuvSHr-46euX6OhonZaoveOqvzDvD7hvpzULX0BGQrEDDeWOE_NDFIy_PruuLk6rU93ZoAAAP_zuY"/>
+</div>
+</div>
+</div>
+<footer class="mt-24 pt-12 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-500 text-sm">
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary">verified</span>
+<p>All certifications are verified and current as of 2024.</p>
+</div>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="hover:text-primary transition-colors" href="#">Credly Profile</a>
 </div>
 </footer>
 </main>
+
 </body></html>

@@ -27,15 +27,16 @@
 
         
         <div class="center">
-          <a href="certificates.html"><i class="fa-solid fa-graduation-cap"></i> Certifications</a>
-          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="certificates.html"><i class="fa-solid fa-graduation-cap"></i><span id="nav-cert"> Certifications</span></a>
+          <a href="index.html"><i class="fa-solid fa-house"></i><span id="nav-home"> Home</span></a>
         </div>
         
         <div class="right">
-                <button data-lang="en"> <img width="20" src="https://img.icons8.com/color/48/great-britain-circular.png" alt="great-britain-circular"/> EN</button>
-                <button data-lang="tr"> <img width="20" src="https://img.icons8.com/fluency/48/turkey-circular.png" alt="turkey-circular"/> TR </button>
-                <button data-lang="jp"> <img width="20" src="https://img.icons8.com/color/48/japan-circular.png" alt="japan-circular"/> JP </button>
-
+            <div class="lang-switch">
+                <button class="lang-btn active-lang" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="tr">TR</button>
+                <button class="lang-btn" data-lang="jp">JP</button>
+            </div>
         </div>
         
     </nav>
@@ -47,17 +48,17 @@
     <main class="section">
         <section class="section" style="padding-bottom:40px;">
             <div class="herotext" style="max-width:800px;text-align:left;">
-                <h1 style="font-size:42px;margin-bottom:12px;">
+                <h1 id="cert-heading" style="font-size:42px;margin-bottom:12px;">
                     Achievements &amp; <span style="color:var(--primary);">Certifications</span>
                 </h1>
-                <p style="color:var(--text-secondary);font-size:18px;margin-bottom:30px;">
+                <p id="cert-description" style="color:var(--text-secondary);font-size:18px;margin-bottom:30px;">
                     A curated collection of my professional milestones and technical certifications 
                     in the field of Cybersecurity and Computer Engineering.
                 </p>
             </div>
         
-            <div class="search" style="margin-top:10px;">
-                <input id="search-bar" type="text" placeholder="Search certifications (e.g. Security+, Cloud)..."/>
+            <div class="search" style="margin-top:10px;" data-translate-placeholder="certSearch">
+                <input id="search-bar" type="text" placeholder="Search certifications (e.g. Security, Cloud)..."/>
             </div>
         </section>
 
