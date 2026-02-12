@@ -7,14 +7,15 @@ function updateThumb(value) {
   if (value < 50) {
     emojiSvg = `data:image/svg+xml,` + encodeURIComponent(`
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-        <circle cx="20" cy="20" r="10" fill="#8b8b8b"/>
-        <circle cx="23" cy="20" r="8" fill="#3f3f3f"/>
+        <circle cx="20" cy="20" r="12" fill="#AF87D7"/>
+        <circle cx="20" cy="20" r="6" fill="#1A1626"/>
       </svg>
     `);
   } else {
     emojiSvg = `data:image/svg+xml,` + encodeURIComponent(`
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-        <circle cx="20" cy="20" r="10" fill="gold"/>
+        <circle cx="20" cy="20" r="12" fill="#E19B5A"/>
+        <circle cx="20" cy="20" r="6" fill="#F5F0FA"/>
       </svg>
     `);
   }
@@ -51,7 +52,13 @@ function updateTheme(value) {
 
 function updateTrackFill(value) {
   const percent = value;
-  slider.style.background = `linear-gradient(to right, var(--surface-a4) ${percent}%, var(--surface-a2) ${percent}%)`;
+  slider.style.background = `
+    linear-gradient(
+      to right,
+      var(--primary) ${percent}%,
+      var(--surface-inner) ${percent}%
+    )
+  `;
 }
 
 function snapToNearest() {
@@ -103,8 +110,7 @@ document.querySelectorAll('nav .right button').forEach(button => {
       discord: "Discord bot written with JavaScript with simple commands for basic usage.",
       mod: "A modification written with JavaScript for the game called Minecraft.",
       customerChurn: "A Machine Learning project for calculating customer churn prediction written with Python.",
-      spotify: "An app for downloading mp3 files from playlist link (Spotify + YouTube).",
-      chattingApp: "A chatting application written with Go. (Soon)",
+      spotify: "An app for downloading mp3 files from playlist link (Spotify + YouTube)."
     },
     tr: {
       heroHeading: "Merhaba, ben Bedirhan.",
@@ -117,8 +123,7 @@ document.querySelectorAll('nav .right button').forEach(button => {
       discord: "JavaScript ile yazılmış, basit komutlarla temel kullanım için tasarlanmış Discord botu.",
       mod: "Minecraft adlı oyun için JavaScript ile yazılmış bir modifikasyon.",
       customerChurn: "Python ile yazılmış, müşteri kaybı tahminini hesaplayan bir makine öğrenimi projesi.",
-      spotify: "Spotify ve YouTube gibi oynatma listesi bağlantılarından MP3 dosyaları indirmek için bir uygulama.",
-      chattingApp: "Go diliyle yazılmış bir sohbet uygulaması. (Yakında)",
+      spotify: "Spotify ve YouTube gibi oynatma listesi bağlantılarından MP3 dosyaları indirmek için bir uygulama."
     },
     jp: {
       heroHeading: "こんにちは、Bedirhanです。",
@@ -131,8 +136,7 @@ document.querySelectorAll('nav .right button').forEach(button => {
       discord: "基本的な使用方法のためのシンプルなコマンドを使用して JavaScript で記述された Discord ボット。",
       mod: "Minecraftというゲーム用にJavaScriptで書かれた改造",
       customerChurn: "Python で記述された、顧客離脱予測を計算する機械学習プロジェクト。",
-      spotify: "プレイリスト リンク (Spotify + YouTube) から mp3 ファイルをダウンロードするアプリ。",
-      chattingApp: "Go で書かれたチャット アプリケーション。(近日公開)",
+      spotify: "プレイリスト リンク (Spotify + YouTube) から mp3 ファイルをダウンロードするアプリ。"
     }
 };
 
@@ -151,7 +155,6 @@ document.querySelectorAll('nav .right button').forEach(button => {
     document.getElementById('mod').textContent = t.mod;
     document.getElementById('customer-churn').textContent = t.customerChurn;
     document.getElementById('spotify').textContent = t.spotify;
-    document.getElementById('chatting-app').textContent = t.chattingApp;
 
 
     localStorage.setItem('siteLanguage', lang);
@@ -177,3 +180,4 @@ document.querySelectorAll('nav .right button').forEach(button => {
   if (saved) {
     switchLanguage(saved);
 }
+

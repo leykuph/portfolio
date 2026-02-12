@@ -6,13 +6,13 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<title>Certificates | Bedirhan</title>
+<title>Certifications | Bedirhan</title>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -27,7 +27,7 @@
 
         
         <div class="center">
-          <a href="certificates.html"><i class="fa-solid fa-graduation-cap"></i> Certificates</a>
+          <a href="certificates.html"><i class="fa-solid fa-graduation-cap"></i> Certifications</a>
           <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
         </div>
         
@@ -41,10 +41,29 @@
     </nav>
     <hr>
 
+    <!-- Hero Section -->
+     
+
+    <main class="section">
+        <section class="section" style="padding-bottom:40px;">
+            <div class="herotext" style="max-width:800px;text-align:left;">
+                <h1 style="font-size:42px;margin-bottom:12px;">
+                    Achievements &amp; <span style="color:var(--primary);">Certifications</span>
+                </h1>
+                <p style="color:var(--text-secondary);font-size:18px;margin-bottom:30px;">
+                    A curated collection of my professional milestones and technical certifications 
+                    in the field of Cybersecurity and Computer Engineering.
+                </p>
+            </div>
+        
+            <div class="search" style="margin-top:10px;">
+                <input id="search-bar" type="text" placeholder="Search certifications (e.g. Security+, Cloud)..."/>
+            </div>
+        </section>
+
+    
     <!-- Certificates Section  -->
 
-  <main class="section">
-    <h1>Certificates</h1>
 
     <div class="cert-grid">
         <div class="cert-card">
@@ -225,9 +244,26 @@
                 <img src="images/IBM.png" alt="IBM Logo">
             </div>
         </div>
-
     </div>
   </main>
     <script src="function.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        
+        const searchInput = document.getElementById('search-bar');
+        const cards = document.querySelectorAll('.cert-card');
+      
+        if (!searchInput) return;
+      
+        searchInput.addEventListener('input', function () {
+          const query = this.value.toLowerCase().trim();
+      
+          cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            card.style.display = text.includes(query) ? 'flex' : 'none';
+          });
+        });
+      
+      });</script>
 </body>
 </html>
