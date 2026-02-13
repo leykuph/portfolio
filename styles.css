@@ -643,6 +643,17 @@ nav .right a span{
         font-size: 30px;
     }
 
+    .projects-section-section {   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+    }
+
     .cert-grid {
         margin: 28px 20px 0;
         gap: 16px;
@@ -701,7 +712,7 @@ nav .right a span{
     }
 
     .hero-section {
-        padding: 24px 14px;
+        padding: 24px 20px;
         gap: 18px;
     }
 

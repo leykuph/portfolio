@@ -8,14 +8,23 @@ function updateThumb(value) {
     emojiSvg = `data:image/svg+xml,` + encodeURIComponent(`
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
         <circle cx="20" cy="20" r="12" fill="#AF87D7"/>
-        <circle cx="20" cy="20" r="6" fill="#1A1626"/>
+        <circle cx="24" cy="16" r="10" fill="#2A2342"/>
       </svg>
     `);
   } else {
     emojiSvg = `data:image/svg+xml,` + encodeURIComponent(`
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-        <circle cx="20" cy="20" r="12" fill="#E19B5A"/>
-        <circle cx="20" cy="20" r="6" fill="#F5F0FA"/>
+        <circle cx="20" cy="20" r="8" fill="#E19B5A"/>
+        <g stroke="#E19B5A" stroke-width="2.6" stroke-linecap="round">
+          <line x1="20" y1="4" x2="20" y2="10"/>
+          <line x1="20" y1="30" x2="20" y2="36"/>
+          <line x1="4" y1="20" x2="10" y2="20"/>
+          <line x1="30" y1="20" x2="36" y2="20"/>
+          <line x1="8.7" y1="8.7" x2="13.1" y2="13.1"/>
+          <line x1="26.9" y1="26.9" x2="31.3" y2="31.3"/>
+          <line x1="8.7" y1="31.3" x2="13.1" y2="26.9"/>
+          <line x1="26.9" y1="13.1" x2="31.3" y2="8.7"/>
+        </g>
       </svg>
     `);
   }
@@ -215,4 +224,3 @@ document.querySelectorAll('nav .right button').forEach(button => {
   if (saved) {
     switchLanguage(saved);
 }
-
