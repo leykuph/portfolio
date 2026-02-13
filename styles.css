@@ -120,7 +120,7 @@ nav .right { justify-content: flex-end; gap: 10px; }
     margin-top: 2px;
     -webkit-appearance: none;  
     appearance: none;
-    width: clamp(96px, 11vw, 150px);
+    width: 100px;
     height: 35px; 
     background: var(--surface-inner); 
     border-radius: 40px;
@@ -284,26 +284,15 @@ nav .right a span{
     color: var(--text-primary);
     font-size: 18px;
 }
-/* about me */
-
-.about-me-section{
-    margin-top: 60px;
-    text-align: center;
-}
-
-.about-me-section h2{
-    font-size: 35px;
-}
-
-.about-me-section p{
-    font-size: 20px;
-    width: 80%;
-    text-align: center;
-    margin: auto;
-    overflow-wrap: anywhere;
-}
 
 /* skills */
+
+.skills-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-soft);
+    border-radius: 10px;
+}
 
 .skills-section{
     padding: 0 0;
@@ -317,7 +306,7 @@ nav .right a span{
 }
 
 .carousel {
-    margin: 20px auto 80px;
+    margin: 10px auto 0px;
     overflow: hidden;
     width: 100%;
     margin-left: 0;
@@ -385,32 +374,50 @@ nav .right a span{
     to { transform: translateX(calc(-100% / 3)); }
 }
 
+/* About Me */
 
-/* Experience */
+.about-me-box{
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: 50px;
+}
 
-.experience-section{
-    text-align: center;
+.about-me-title{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto 12px;
+}
+
+.mini-line {
+    width: 30px;
+    height: 6px;
+    background-color: var(--primary);
+    border-radius: 999px;
+}
+
+.about-me-title .about-me-text {
+    font-size: 25px;
+    letter-spacing: 0.01em;
+    font-weight: 50;
+}
+
+.about-me-box .card{
+    text-align: left;
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.experience-section h2{
-    padding: 20px 0;
-    font-size: 35px;
-    width: 100%;
-}
-
-.experience-line {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-    max-width: 600px;
-    margin: 10px auto 0;
+    align-items: left;
+    width: 600px;
+    height: 300px;
+    padding: 20px;
+    background-color: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color:var(--text-secondary);
 }
 
 .line-left,
@@ -433,6 +440,7 @@ nav .right a span{
 
             /* Projects */
 #projects {
+    margin-top: 30px;
     text-align: center;
     font-size: 25px;
   }
