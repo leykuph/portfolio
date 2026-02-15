@@ -292,6 +292,7 @@ nav .right a span{
     height: 1px;
     background-color: var(--border-soft);
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .skills-section{
@@ -419,72 +420,64 @@ nav .right a span{
     font-size: 16px;
     color:var(--text-secondary);
 }
-
-.line-left,
-.line-right {
-    flex: 1;
-    height: 3px;
-    background-color: var(--border-soft); 
-    border-radius: 10px;
-}
-
-.experience-dot {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: transparent; 
-    border: 3px solid var(--primary);
-    z-index: 2;
-}
-
-
             /* Projects */
-#projects {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 25px;
-  }
-  
-  .project-entry {
+
+.projects-box{
+    margin-top: 40px;
     width: 100%;
     max-width: 600px;
-    margin: 25px auto;
+    margin-right: 50px;
 }
-  
-.project-entry p {
-    margin-bottom: 15px;
-    font-size: 20px;
-    overflow-wrap: anywhere;
-  }
-  
-  .project-line {
-    display: flex;
+
+.projects-title{
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 16px;
+    margin: 0 auto 12px;
+}
+
+.projects-title #projects-text {
+    font-size: 25px;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+}
+
+.projects-box .card-container{
     width: 100%;
-    position: relative;
-    margin-top: 10px;
 }
 
-.line-left,
-.line-right {
-    flex: 1;
-    height: 3px;
-    background-color: var(--border-soft); 
-    border-radius: 10px;
+.projects-box .card-1{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border: 3px solid #00e5ff;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--surface);
 }
 
-.project-dot {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: transparent; 
-    border: 3px solid var(--primary);
-    z-index: 2;
+.projects-box .project-img img{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    display: block;
 }
+
+.projects-box .card-1 .text p{
+    margin: 0;
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+
+
+
 
 /* Certificates */
-
 
 
 .search input[type=text]{
@@ -640,6 +633,11 @@ nav .right a span{
         align-items: flex-start;
     }
 
+    .projects-box {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
     .headshot img {
         width: 160px;
         height: 160px;
@@ -724,6 +722,11 @@ nav .right a span{
         gap: 18px;
     }
 
+    .projects-box .card-1{
+        min-height: 0;
+        padding: 16px;
+    }
+
     .hero-section h2 {
         font-size: 28px;
     }
@@ -806,6 +809,12 @@ nav .right a span{
 
     #cert-description {
         font-size: 16px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .projects-box {
+        margin-right: 0;
     }
 }
 
