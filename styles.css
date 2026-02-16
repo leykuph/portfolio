@@ -63,7 +63,7 @@ html{
 }
 
 body{
-    font-family: "Public Sans", "sans-serif";
+    font-family: "Public Sans", sans-serif;
     background: var(--bg-base);
     color: var(--text-primary);
     margin: 0;
@@ -452,7 +452,9 @@ nav .right a span{
 .about-me-box{
     margin-top: 40px;
     max-width: 600px;
-    margin-left: 50px;
+    margin-left: 0;
+    width: 100%;
+    flex: 1 1 540px;
     padding-left: 16px;
     padding-right: 16px;
     box-sizing: border-box;
@@ -605,7 +607,8 @@ nav .right a span{
     padding-left: 16px;
     padding-right: 16px;
     margin-top: 40px;
-    width: 100%;
+    width: auto;
+    flex: 1 1 540px;
     max-width: 600px;
     padding-bottom: 100px;
 }
