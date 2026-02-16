@@ -45,9 +45,6 @@ if (themeSaved === 'light') {
   document.body.classList.remove('light-theme');
 }
 
-updateThumb(slider.value);
-updateTrackFill(slider.value);
-
 function updateTheme(value) {
   if (value < 50) {
     document.body.classList.remove('light-theme');
@@ -97,15 +94,6 @@ slider.addEventListener('touchend', snapToNearest);
 
 
 // Translations
-
-document.querySelectorAll('nav .right button').forEach(button => {
-    button.addEventListener('click', () => {
-      const lang = button.dataset.lang;
-      switchLanguage(lang);
-    });
-  });
-
-
   const translations = {
     en: {
       heroHeading: "Hi, I'm",
@@ -123,7 +111,7 @@ document.querySelectorAll('nav .right button').forEach(button => {
       experienceTitle: "Experience",
       expPeriod1: "6-MONTH PERIOD",
       expRole1: "Vehicle ECU Coding",
-      expCompany1: "Edge Tuning",
+      expCompany1: "Hands-on work with my dad",
       expBullet1: "Worked on vehicle ECU coding tasks and practical troubleshooting.",
       expBullet2: "Learned calibration logic, diagnostics, and workflow discipline.",
       expBullet3: "Built hands-on understanding of automotive electronics and control systems.",
@@ -154,7 +142,7 @@ document.querySelectorAll('nav .right button').forEach(button => {
       experienceTitle: "Deneyim",
       expPeriod1: "6 AYLIK DÖNEM",
       expRole1: "Araç ECU Kodlama",
-      expCompany1: "Edge Tuning",
+      expCompany1: "Babamla birlikte uygulamalı çalışma",
       expBullet1: "Araç ECU kodlama görevleri ve pratik arıza tespiti üzerinde çalıştım.",
       expBullet2: "Kalibrasyon mantığı, diagnostik süreçleri ve disiplinli iş akışı öğrendim.",
       expBullet3: "Otomotiv elektroniği ve kontrol sistemleri konusunda uygulamalı bilgi edindim.",
@@ -185,7 +173,7 @@ document.querySelectorAll('nav .right button').forEach(button => {
       experienceTitle: "経験",
       expPeriod1: "6か月間",
       expRole1: "車両ECUコーディング",
-      expCompany1: "Edge Tuning",
+      expCompany1: "父と一緒に実務形式で対応",
       expBullet1: "車両ECUコーディング作業と実践的なトラブルシューティングを行いました。",
       expBullet2: "キャリブレーションの考え方、診断、業務フローの規律を学びました。",
       expBullet3: "自動車電子制御と制御システムに関する実践的な理解を深めました。",
