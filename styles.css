@@ -55,15 +55,15 @@
 }
 
 html{
+    font-size: clamp(16px, 0.4vw + 13px, 22px);
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
     overscroll-behavior: none;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+
 }
 
 body{
-    font-family: "Public Sans", sans-serif;
+    font-family: "Public Sans", "sans-serif";
     background: var(--bg-base);
     color: var(--text-primary);
     margin: 0;
@@ -106,6 +106,26 @@ a {
 }
 
 .split > * { flex: 1; min-width: 0; }
+
+@media (min-width: 1101px) {
+    main > .split:last-of-type {
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: clamp(48px, 6vw, 160px);
+        padding-left: clamp(20px, 4vw, 80px);
+        padding-right: clamp(20px, 4vw, 80px);
+    }
+
+    main > .split:last-of-type > .about-me-box {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    main > .split:last-of-type > .projects-box {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
 
 /* Navbar */
 nav{
@@ -275,7 +295,7 @@ nav .right a span{
 }
 
 .hero-section .text h2{
-    font-size: 40px;
+    font-size: clamp(2rem, 1.6vw + 1rem, 3.2rem);
     white-space: normal;
     line-height: 1.2;
 }
@@ -288,12 +308,12 @@ nav .right a span{
 
 .hero-section .text p{
     color: var(--text-third);
-    font-size: 16px;
+    font-size: 1rem;
     overflow-wrap: anywhere;
 }
 
 .hero-section .text a{
-    font-size: 20px;
+    font-size: 1.25rem;
     display: inline-block;
     padding: 10px 2px;
     color: var(--text-primary);
@@ -314,7 +334,7 @@ nav .right a span{
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: min(300px, 100%);
+    width: min(360px, 100%);
     max-width: 100%;
     min-width: 0;
     height: 44px;
@@ -323,8 +343,10 @@ nav .right a span{
     border-radius: 999px;
     background: #b488de;
     color: #1f1730;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
     box-shadow: 0 10px 30px rgba(175, 135, 215, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -374,8 +396,8 @@ nav .right a span{
     max-width: 100%;
 }
 
- .skills-section h2{
-    font-size: 35px;
+.skills-section h2{
+    font-size: clamp(1.8rem, 1.25vw + 1rem, 2.8rem);
 }
 
 .carousel {
@@ -402,8 +424,8 @@ nav .right a span{
 
 .card {
     flex: 0 0 auto;
-    width: 160px;
-    height: 110px;
+    width: 180px;
+    height: 130px;
 
     display: flex;
     flex-direction: column;
@@ -418,7 +440,8 @@ nav .right a span{
     border: 1px solid var(--border-soft);
     border-radius: 10px;
 
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 500;
     color: var(--text-primary);
 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -432,8 +455,8 @@ nav .right a span{
 }
 
 .card img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
 }
 
@@ -450,13 +473,8 @@ nav .right a span{
 /* About Me */
 
 .about-me-box{
-    margin-top: 40px;
-    max-width: 600px;
-    margin-left: 0;
-    width: 100%;
-    flex: 1 1 540px;
-    padding-left: 16px;
-    padding-right: 16px;
+    max-width: clamp(620px, 45vw, 860px);
+    margin: 40px;
     box-sizing: border-box;
 }
 
@@ -476,19 +494,18 @@ nav .right a span{
 }
 
 .about-me-title .about-me-text {
-    font-size: 25px;
+    font-size: clamp(1.4rem, 0.9vw + 0.8rem, 2rem);
     letter-spacing: 0.01em;
     font-weight: 400;
 }
 
 .about-me-box .card{
     text-align: left;
-    font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: left;
     width: 100%;
-    max-width: 600px;
+    max-width: clamp(620px, 45vw, 860px);
     min-height: 300px;
     height: auto;
     padding: 20px;
@@ -496,7 +513,7 @@ nav .right a span{
     border: 1px solid var(--border-soft);
     border-radius: 40px;
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 1rem;
     color:var(--text-secondary);
 }
 
@@ -504,10 +521,8 @@ nav .right a span{
 
 .experience-section{
     width: 100%;
-    max-width: 600px;
-    margin-top: 8px;
-    padding-left: 4px;
-    padding-right: 4px;
+    max-width: clamp(620px, 45vw, 860px);
+    margin: 40px;
     box-sizing: border-box;
 }
 
@@ -520,7 +535,7 @@ nav .right a span{
 }
 
 .experience-title h4{
-    font-size: 25px;
+    font-size: clamp(1.4rem, 0.9vw + 0.8rem, 2rem);
     letter-spacing: 0.01em;
     font-weight: 400;
     color: var(--text-primary);
@@ -586,7 +601,7 @@ nav .right a span{
 
 .experience-company{
     color: var(--text-third);
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 12px;
 }
 
@@ -604,12 +619,9 @@ nav .right a span{
             /* Projects */
 
 .projects-box{
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-top: 40px;
-    width: auto;
-    flex: 1 1 540px;
-    max-width: 600px;
+    margin: 40px;
+    width: 100%;
+    max-width: clamp(620px, 45vw, 860px);
     padding-bottom: 100px;
 }
 
@@ -632,7 +644,7 @@ nav .right a span{
 }
 
 .projects-title #projects-text {
-    font-size: 25px;
+    font-size: clamp(1.4rem, 0.9vw + 0.8rem, 2rem);
     letter-spacing: 0.01em;
     font-weight: 400;
 }
@@ -645,7 +657,7 @@ nav .right a span{
 .featured-project-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 600px;
+    width: 100%;
     max-width: 100%;
     max-height: 300px;
     border-radius: 32px;
@@ -680,7 +692,7 @@ nav .right a span{
 }
 
 .featured-project-content h5 {
-    font-size: 28px;
+    font-size: clamp(1.5rem, 1vw + 0.9rem, 2.2rem);
     line-height: 1.1;
     font-weight: 700;
     color: var(--text-primary);
@@ -841,7 +853,7 @@ nav .right a span{
 
 /* Responsiveness */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .section {
         padding: 28px 36px;
     }
