@@ -315,9 +315,12 @@ nav .right a span{
     align-items: center;
     justify-content: center;
     gap: 8px;
-    min-width: 300px;
+    width: min(300px, 100%);
+    max-width: 100%;
+    min-width: 0;
     height: 44px;
     padding: 0 18px;
+    box-sizing: border-box;
     border-radius: 999px;
     background: #b488de;
     color: #1f1730;
@@ -338,8 +341,11 @@ nav .right a span{
     justify-content: center;
     align-self: center;
     padding-top: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
     text-align: center;
     padding-bottom: 0;
+    box-sizing: border-box;
 }
 .cv-section .info{
     width: 300px;
@@ -449,6 +455,9 @@ nav .right a span{
     margin-top: 40px;
     max-width: 600px;
     margin-left: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
 }
 
 .about-me-title{
@@ -469,7 +478,7 @@ nav .right a span{
 .about-me-title .about-me-text {
     font-size: 25px;
     letter-spacing: 0.01em;
-    font-weight: 50;
+    font-weight: 400;
 }
 
 .about-me-box .card{
@@ -497,6 +506,9 @@ nav .right a span{
     width: 100%;
     max-width: 600px;
     margin-top: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-sizing: border-box;
 }
 
 .experience-title{
@@ -510,7 +522,7 @@ nav .right a span{
 .experience-title h4{
     font-size: 25px;
     letter-spacing: 0.01em;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--text-primary);
 }
 
@@ -592,8 +604,8 @@ nav .right a span{
             /* Projects */
 
 .projects-box{
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-top: 40px;
     width: 100%;
     max-width: 600px;
@@ -621,7 +633,7 @@ nav .right a span{
 .projects-title #projects-text {
     font-size: 25px;
     letter-spacing: 0.01em;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .projects-box .card-container{
@@ -878,7 +890,8 @@ nav .right a span{
     }
 
     .cv {
-        width: 300px;
+        width: 100%;
+        max-width: 520px;
         display: flex;
         justify-content: center;
     }
@@ -1053,6 +1066,7 @@ nav .right a span{
 
     .cv #cv {
         width: 100%;
+        min-width: 0;
         font-size: 16px;
         height: 42px;
         padding: 0 14px;
@@ -1213,7 +1227,8 @@ nav .right a span{
     }
 
     .cv #cv {
-        width: auto;
+        width: 100%;
+        min-width: 0;
         max-width: 100%;
     }
 
@@ -1244,9 +1259,5 @@ nav .right a span{
         height: 136px;
     }
 
-    .project-dot,
-    .experience-dot {
-        width: 22px;
-        height: 22px;
-    }
+
 }
