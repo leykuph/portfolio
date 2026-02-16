@@ -11,6 +11,7 @@
     /* === Text === */
     --text-primary: #F5F0FA;
     --text-secondary: #C7BDD9;
+    --text-third: #A89DBD;
     --error: #E85A6A;
   
     /* === Subtle Effects === */
@@ -22,6 +23,8 @@
         #AF87D7 0%,
         #E19B5A 100%
     );
+    --project-card-bg: linear-gradient(120deg, #2a2940 0%, #1e1730 52%, #1b1729 100%);
+    --project-media-bg: linear-gradient(165deg, #2a2940 0%, #1d1831 100%);
   
     --radius: 14px;
   }
@@ -33,9 +36,12 @@
   
     --text-primary: #2A2342;
     --text-secondary: #5C4F74;
+    --text-third: #7A6B94;
   
     --border-soft: rgba(175, 135, 215, 0.25);
     --border-focus: rgba(175, 135, 215, 0.5);
+    --project-card-bg: linear-gradient(120deg, #f6f1fb 0%, #efe7f7 52%, #e9dff4 100%);
+    --project-media-bg: linear-gradient(165deg, #f2eaf9 0%, #e8dcf3 100%);
   
     background: var(--bg-base);
     color: var(--text-primary);
@@ -105,6 +111,12 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg-base);
+    border-bottom: 1px solid var(--text-third);
+    
 }
 
 nav .left, nav .center, nav .right{
@@ -243,10 +255,19 @@ nav .right a span{
 }
 
 .headshot img{
+    border: 5px solid var(--border-soft);
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.text-primary{
+    color: var(--primary);
+}
+
+.text-third{
+    color: var(--text-third);
 }
 
 .hero-section .text {
@@ -267,7 +288,7 @@ nav .right a span{
 }
 
 .hero-section .text p{
-    color: var(--text-secondary);
+    color: var(--text-third);
     font-size: 16px;
     overflow-wrap: anywhere;
 }
@@ -277,12 +298,58 @@ nav .right a span{
     display: inline-block;
     padding: 10px 2px;
     color: var(--text-primary);
-    
+}
+
+.hero-section .text a:hover{
+    color: var(--primary);
 }
 
 .hero-section .text .cv a{
     color: var(--text-primary);
     font-size: 18px;
+}
+/* CV */
+
+.cv #cv{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 300px;
+    height: 44px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: #b488de;
+    color: #1f1730;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(175, 135, 215, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv #cv:hover{
+    transform: translateY(-1px);
+}
+
+.cv-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding-top: 60px;
+    text-align: center;
+    padding-bottom: 0;
+}
+.cv-section .info{
+    width: 300px;
+    height: 100px;
+    margin: 12px auto 0;
+}
+.cv-section .info h5{
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 300;
 }
 
 /* skills */
@@ -311,7 +378,8 @@ nav .right a span{
     overflow: hidden;
     width: 100%;
     margin-left: 0;
-    padding: 20px 0;
+    padding-top: 5px;
+    padding-bottom: 20px;
     margin-left: calc(50% - 50vw);
 }
 
@@ -410,23 +478,136 @@ nav .right a span{
     display: flex;
     flex-direction: column;
     align-items: left;
-    width: 600px;
-    height: 300px;
+    width: 100%;
+    max-width: 600px;
+    min-height: 300px;
+    height: auto;
     padding: 20px;
     background-color: var(--surface);
     border: 1px solid var(--border-soft);
-    border-radius: 10px;
+    border-radius: 40px;
     margin-bottom: 20px;
     font-size: 16px;
     color:var(--text-secondary);
 }
+
+/* Experience */
+
+.experience-section{
+    width: 100%;
+    max-width: 600px;
+    margin-top: 8px;
+}
+
+.experience-title{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto 14px;
+}
+
+.experience-title h4{
+    font-size: 25px;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.experience-timeline{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding-left: 34px;
+}
+
+.experience-timeline::before{
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    background: var(--border-soft);
+}
+
+.experience-item{
+    position: relative;
+    border-radius: 30px;
+    border-bottom: 1px solid var(--border-soft);
+    background: tranparent;
+    padding: 22px 24px;
+    color: var(--text-secondary);
+}
+
+.experience-item::before{
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 16px;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: #6d647f;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.experience-item.current::before{
+    background: var(--primary);
+}
+
+.experience-period{
+    color: #E19B5A;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+}
+
+.experience-item h5{
+    color: var(--text-primary);
+    font-size: 22px;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.experience-company{
+    color: var(--text-third);
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.experience-item ul{
+    margin: 0;
+    padding-left: 22px;
+    display: grid;
+    gap: 6px;
+}
+
+.experience-item li{
+    font-size: 14px;
+    line-height: 1.35;
+}
             /* Projects */
 
 .projects-box{
+    padding-left: 50px;
+    padding-right: 50px;
     margin-top: 40px;
     width: 100%;
     max-width: 600px;
-    margin-right: 50px;
+    padding-bottom: 100px;
+}
+
+.projects-box > .btn-primary{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .projects-title{
@@ -445,33 +626,113 @@ nav .right a span{
 
 .projects-box .card-container{
     width: 100%;
+    padding-bottom: 30px;
 }
 
-.projects-box .card-1{
-    width: 100%;
+.featured-project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 32px;
+    overflow: hidden;
+    border: 1px solid var(--border-soft);
+    background: var(--surface);
     min-height: 300px;
+    
+}
+
+.featured-project-media {
+    min-height: 300px;
+    background: radial-gradient(circle at 20% 20%, rgba(175, 135, 215, 0.24) 0%, rgba(175, 135, 215, 0) 60%),
+                var(--project-media-bg);
+}
+
+.featured-project-media img {
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.92;
+}
+
+.featured-project-content {
+    padding: 16px 18px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    border: 3px solid #00e5ff;
-    border-radius: 20px;
-    padding: 20px;
-    background-color: var(--surface);
+    justify-content: space-between;
+    gap: 10px;
 }
 
-.projects-box .project-img img{
-    width: 100%;
-    max-width: 100%;
-    border-radius: 8px;
-    display: block;
+.featured-project-content h5 {
+    font-size: 28px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: var(--text-primary);
 }
 
-.projects-box .card-1 .text p{
-    margin: 0;
-    font-size: 16px;
+.featured-project-content p {
     color: var(--text-secondary);
-    line-height: 1.5;
+    font-size: 13px;
+    line-height: 1.4;
+    max-width: 40ch;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-tags span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.project-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.project-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    height: 36px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-actions a:hover {
+    transform: translateY(-1px);
+}
+
+.project-actions .btn-primary {
+    background: #b488de;
+    color: #1f1730;
+    box-shadow: 0 10px 30px rgba(175, 135, 215, 0.2);
+}
+
+
 
 
 
@@ -596,6 +857,43 @@ nav .right a span{
         gap: 20px;
     }
 
+    main > .split:first-of-type {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    main > .split:first-of-type > .hero-section,
+    main > .split:first-of-type > .cv-section {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+        
+    .cv-section {
+        width: 100%;
+        align-self: stretch;
+        padding-top: 8px;
+        margin-top: 0;
+    }
+
+    .cv {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cv #cv {
+        min-width: 0;
+        width: min(520px, 100%);
+    }
+
+    .cv-section .info {
+        width: min(520px, 100%);
+        height: auto;
+        margin-top: 10px;
+    }
+
     nav {
         flex-wrap: wrap;
         row-gap: 14px;
@@ -638,6 +936,17 @@ nav .right a span{
         margin-right: 0;
     }
 
+    .featured-project-card {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        width: 100%;
+        max-height: none;
+    }
+
+    .featured-project-media {
+        min-height: 230px;
+    }
+
     .headshot img {
         width: 160px;
         height: 160px;
@@ -647,6 +956,19 @@ nav .right a span{
     .about-me-section h2,
     .experience-section h2 {
         font-size: 30px;
+    }
+
+    .about-me-box {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .experience-section {
+        max-width: 100%;
+    }
+
+    .experience-item {
+        padding: 18px 18px;
     }
 
     .projects-section-section {   
@@ -682,6 +1004,8 @@ nav .right a span{
     }
   
 }
+
+
   
 @media (max-width: 600px) {
     .section {
@@ -722,9 +1046,33 @@ nav .right a span{
         gap: 18px;
     }
 
-    .projects-box .card-1{
-        min-height: 0;
-        padding: 16px;
+    .cv-section {
+        padding-top: 0;
+        gap: 10px;
+    }
+
+    .cv #cv {
+        width: 100%;
+        font-size: 16px;
+        height: 42px;
+        padding: 0 14px;
+    }
+
+    .cv-section .info h5 {
+        font-size: 14px;
+        line-height: 1.35;
+    }
+
+    .featured-project-content {
+        padding: 24px 18px;
+    }
+
+    .featured-project-content h5 {
+        font-size: 32px;
+    }
+
+    .featured-project-content p {
+        font-size: 15px;
     }
 
     .hero-section h2 {
@@ -749,6 +1097,33 @@ nav .right a span{
     .project-entry p,
     .experience-section {
         font-size: 16px;
+    }
+
+    .experience-timeline {
+        padding-left: 26px;
+        gap: 16px;
+    }
+
+    .experience-item::before {
+        left: -27px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .experience-period {
+        font-size: 12px;
+    }
+
+    .experience-item h5 {
+        font-size: 19px;
+    }
+
+    .experience-company {
+        font-size: 14px;
+    }
+
+    .experience-item li {
+        font-size: 13px;
     }
 
     .track {
@@ -810,6 +1185,43 @@ nav .right a span{
     #cert-description {
         font-size: 16px !important;
     }
+}
+
+@media (max-width: 700px) {
+    main > .split:first-of-type {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    main > .split:first-of-type > .hero-section,
+    main > .split:first-of-type > .cv-section {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .cv-section {
+        align-self: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cv {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cv #cv {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .cv-section .info {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 @media (max-width: 520px) {

@@ -37,10 +37,8 @@
                 <button class="lang-btn" data-lang="jp">JP</button>
             </div>
         </div>
-        
     </nav>
 
-    <hr>
 
     <main>
         <!-- Section 1 - Hero -->
@@ -50,19 +48,25 @@
                     <img src="images/headshot.jpeg" alt="headshot">
                 </div>
                 <div class="text">
-                    <h2 id="hero-heading">Hi, I'm Bedirhan.</h2>
+                    <h2 id="hero-heading">Hi, I'm <span class="text-primary" id="name">Bedirhan.</span></h2>
                     <p id="occupation">Computer Engineering Student</p>
                     <p id="occupation-2">(Preparing To Be Cybersecurity Analyst)</p>     
-                    <h3> <i class="fa-solid fa-location-pin"></i> Istanbul, Turkey</h3>  
+                    <h3><i class="fa-solid fa-location-pin"></i> <span id="location-text">Istanbul, Turkey</span></h3>  
                     <a href="https://www.linkedin.com/in/leykuph/" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin"></i> </a>
                     <a href="https://github.com/leykuph" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
                     <a href="mailto:leykuph@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
                     <a href="https://x.com/leykuph" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="https://www.instagram.com/leykuph/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                    <div class="cv">
-                        <a id="cv" href="/images/CV.pdf" download>Download Public CV <i class="fa-solid fa-download"></i></a>
-                    </div>
+                    
                 </div>
+            </section>
+            <section class="cv-section"> 
+                  <div class="cv">
+                        <a id="cv" href="/images/CV.pdf" download>Download Public CV <i class="fa-solid fa-download"></i></a>
+                  </div>
+                  <div class="info">
+                        <h5 id="cv-info">For unredacted CV please reach me from SNS</h5>
+                  </div>
             </section>
         </div>
             <!-- Section 3 - Skills -->
@@ -165,102 +169,92 @@
                 <section id="about-me" class="about-me-box">
                   <section class="about-me-title">
                         <div class="mini-line"></div>
-                        <h4 class="about-me-text"><b>About Me</b></h4>
+                        <h4 id="about-me-title" class="about-me-text"><b>About Me</b></h4>
                   </section>
 
                   <div class="card-container">
                     <div class="card">
-                        <p>I'm a third year Computer Engineering student aiming to build a career in Blue Team cybersecurity and IT infrastructure. My primary interest lies in defensive security monitoring systems, analyzing logs, hardening configurations, and improving overall infrastructure resilience.</p>
-                        <p>I work extensively with Linux-based environments and actively develop practical knowledge in networking fundamentals, system administration, and security tooling. I am particularly interested in how operating systems, network layers, and services interact from a defensive perspective.</p>
-                        <p>My long-term goal is to specialize in security operations, incident detection and response, and infrastructure protection, contributing to environments where reliability, visibility, and system integrity are critical.</p>
+                        <p id="about-me-p1">I'm a third year Computer Engineering student aiming to build a career in Blue Team cybersecurity and IT infrastructure. My primary interest lies in defensive security monitoring systems, analyzing logs, hardening configurations, and improving overall infrastructure resilience.</p>
+                        <p id="about-me-p2">I work extensively with Linux-based environments and actively develop practical knowledge in networking fundamentals, system administration, and security tooling. I am particularly interested in how operating systems, network layers, and services interact from a defensive perspective.</p>
+                        <p id="about-me-p3">My long-term goal is to specialize in security operations, incident detection and response, and infrastructure protection, contributing to environments where reliability, visibility, and system integrity are critical.</p>
+                    </div>
                   </div>
+
+                  <section id="experience" class="experience-section">
+                        <section class="experience-title">
+                              <div class="mini-line"></div>
+                              <h4 id="experience-heading"><b>Experience</b></h4>
+                        </section>
+
+                        <div class="experience-timeline">
+                              <article class="experience-item current">
+                                    <p id="exp-period-1" class="experience-period">6-MONTH PERIOD</p>
+                                    <h5 id="exp-role-1">Vehicle ECU Coding</h5>
+                                    <p id="exp-company-1" class="experience-company">Hands-on work with my dad</p>
+                                    <ul>
+                                          <li id="exp-bullet-1">Worked on vehicle ECU coding tasks and practical troubleshooting.</li>
+                                          <li id="exp-bullet-2">Learned calibration logic, diagnostics, and workflow discipline.</li>
+                                          <li id="exp-bullet-3">Built hands-on understanding of automotive electronics and control systems.</li>
+                                    </ul>
+                              </article>
+                        </div>
+                  </section>
                 </section>
 
                  
                 <section id="projects" class="projects-box">
-                  <section class="projects-title">
-                        <div class="mini-line"></div>  
-                        <h4 id="projects-text"><b>Projects LIVE</b></h4>
-                  </section>
-
-                  <div class="card-container">
-                        <section class="card-1">
-                              <div class="project-img">
-                                    <img src="images/ai-interior.png" alt="AI Interior">
-                              </div>
-                              <div class="text">
-                                    <p>so i did this and that etc etc etc</p>
-                              </div>
+                        <section class="projects-title">
+                              <div class="mini-line"></div>  
+                              <h4 id="projects-text"><b>Featured Projects</b></h4>
                         </section>
-                  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <!-- 
-                    <div class="project-entry">
-                      <p id="discord">Discord bot written with JavaScript with simple commands for basic usage.</p>
-                      <div class="project-line">
-                        <div class="line-left"></div>
-                        <span class="project-dot"></span>
-                        <div class="line-right"></div>
-                      </div>
-                    </div>
-                  
-                    <div class="project-entry">
-                      <p id="mod">A modification written with JavaScript for the game called Minecraft.</p>
-                      <div class="project-line">
-                        <div class="line-left"></div>
-                        <span class="project-dot"></span>
-                        <div class="line-right"></div>
-                      </div>
-                    </div>
-                  
-                      <div class="project-entry">
-                        <p id="customer-churn">A Machine Learning project for calculating customer churn prediction written with Python.</p>
-                        <div class="project-line">
-                          <div class="line-left"></div>
-                          <span class="project-dot"></span>
-                          <div class="line-right"></div>
+                        <div class="card-container">
+                              <section class="featured-project-card">
+                                    <div class="featured-project-media">
+                                          <img src="images/ai-interior.png" alt="Project preview for AI Interior app">
+                                    </div>
+                                    <div class="featured-project-content">
+                                          <h5>Interior AI</h5>
+                                          <p id="project-desc-1">
+                                          An AI-powered interior design app that generates room concepts from user prompts.
+                                          It combines generation, style presets, and user feedback to iterate designs quickly.
+                                          </p>
+                                          <div class="project-tags">
+                                          <span>JavaScript</span>
+                                          <span>OpenAI API</span>
+                                          <span>Wiro</span>
+                                          </div>
+                                          <div class="project-actions">
+                                          <a id="view-code-1" href="https://github.com/leykuph/ai-interior/" target="_blank" rel="noopener noreferrer" class="btn-primary">View Code</a>                                   
+                                          </div>
+                                    </div>
+                              </section>
                         </div>
-                      </div>
-                  
-                    <div class="project-entry">
-                      <p id="spotify">An app for downloading mp3 files from playlist links (Spotify + YouTube).</p>
-                      <div class="project-line">
-                        <div class="line-left"></div>
-                        <span class="project-dot"></span>
-                        <div class="line-right"></div>
-                      </div>
-                    </div>
 
-                    <div class="project-entry">
-                        <p id="interior">AI image creation and user based room interior application.</p>
-                        <div class="project-line">
-                          <div class="line-left"></div>
-                          <span class="project-dot"></span>
-                          <div class="line-right"></div>
+                        <div class="card-container">
+                              <section class="featured-project-card">
+                                    <div class = "featured-project-media">
+                                          <img src="images/login-app.png" alt="Project preview for login-app">
+                                    </div>
+                                    <div class="featured-project-content">
+                                          <h5>Authentication</h5>
+                                          <p id="project-desc-2">
+                                                A secure, full-stack web application featuring Spring Boot for the backend and a modern HTML/CSS/JS frontend. It implements JWT-based authentication with a premium, responsive UI.
+                                          </p>
+                                          <div class="project-tags">
+                                                <span>Java</span>
+                                                <span>JavaScript</span>
+                                                <span>Spring Boot</span>
+                                                <span>PostgreSQL</span>
+                                          </div>
+                                          <div class="project-actions">
+                                                <a id="view-code-2" href="https://github.com/leykuph/AuthenticationProject" target="_blank" rel="noopener noreferrer" class="btn-primary">View Code</a>                                   
+                                          </div>
+                                    </div>
+                              </section>
                         </div>
-                      </div>
--->
-                      
-                  
+                                          
+                        <a id="view-all-projects" href="https://github.com/leykuph/" target="_blank" rel="noopener noreferrer" class="btn-primary">View all projects on github <i class="fa-solid fa-arrow-right"></i> </a>
                   </section>
 
             </div>
