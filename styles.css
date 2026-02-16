@@ -106,6 +106,21 @@ a {
 
 .split > * { flex: 1; min-width: 0; }
 
+@media (min-width: 1201px) {
+    main > .split:last-of-type {
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: clamp(70px, 10vw, 180px);
+        padding-left: clamp(24px, 5vw, 88px);
+        padding-right: clamp(24px, 5vw, 88px);
+    }
+
+    main > .split:last-of-type > .about-me-box,
+    main > .split:last-of-type > .projects-box {
+        flex: 0 1 600px;
+    }
+}
+
 /* Navbar */
 nav{
     display: flex;
@@ -451,7 +466,7 @@ nav .right a span{
 .about-me-box{
     margin-top: 40px;
     max-width: 600px;
-    margin-left: 50px;
+    margin-left: 0;
     padding-left: 16px;
     padding-right: 16px;
     box-sizing: border-box;
@@ -604,6 +619,7 @@ nav .right a span{
     padding-left: 16px;
     padding-right: 16px;
     margin-top: 40px;
+    margin-left: auto;
     width: 100%;
     max-width: 600px;
     padding-bottom: 100px;
@@ -838,6 +854,29 @@ nav .right a span{
 /* Responsiveness */
 
 @media (max-width: 1100px) {
+    main > .split:last-of-type {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    main > .split:last-of-type > .about-me-box,
+    main > .split:last-of-type > .projects-box {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .projects-box {
+        margin-left: 0;
+    }
+
+    .about-me-box {
+        margin-left: 0;
+    }
+
     .section {
         padding: 28px 36px;
     }
@@ -861,6 +900,12 @@ nav .right a span{
     .split {
         flex-direction: column;
         gap: 20px;
+    }
+
+    main > .split:last-of-type {
+        gap: 20px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     main > .split:first-of-type {
