@@ -13,6 +13,9 @@
     --text-secondary: #C7BDD9;
     --text-third: #A89DBD;
     --error: #E85A6A;
+
+    /* === SIDENAV === */
+    --sidenav-bg: linear-gradient(180deg, #1A1626 0%, #2A2342 100%);
   
     /* === Subtle Effects === */
     --border-soft: rgba(175, 135, 215, 0.15);
@@ -39,6 +42,8 @@
     --text-secondary: #5C4F74;
     --text-third: #7A6B94;
   
+    --sidenav-bg: linear-gradient(180deg, #F4EFF8 0%, #E9DFF4 100%);
+
     --border-soft: rgba(175, 135, 215, 0.25);
     --border-focus: rgba(175, 135, 215, 0.5);
     --project-card-bg: linear-gradient(120deg, #f6f1fb 0%, #efe7f7 52%, #e9dff4 100%);
@@ -141,86 +146,103 @@ nav{
     
 }
 
-nav .left, nav .center, nav .right{
+/* The side navigation menu */
+.sidenav {
+    height: 100%; 
+    width: 275px;
+    position: fixed; 
+    z-index: 1;
+    top: 0; 
+    left: 0;
+    background: var(--sidenav-bg);
+    overflow-x: hidden;
+    padding-top: 120px;
+    transition: 0.5s;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 20px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--text-third);
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+  }
+  
+  .sidenav a:hover {
+    color: var(--text-primary);
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .sidenav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    z-index: 0;
+  }
+
+  .sidenav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav .left h2{
+    margin-left: 20px;
+    font-size: 1.5rem;
+    color: var(--surface-inner);
+    font-weight: 700;
+    background-color: var(--primary);
+    padding: 4px 8px;
+    border-radius: 999px;
+}
+
+nav .left h2:hover{
+    cursor: pointer;
+}
+
+
+
+nav .left, nav .right{
     flex: 1;
     display: flex; 
 }
-nav .center { justify-content: center; gap: 20px; }
 nav .right { justify-content: flex-end; gap: 10px; }
 
-/* Theme Slider */
-.slider {
-    margin-left: 30px;
-    margin-top: 2px;
-    -webkit-appearance: none;  
-    appearance: none;
-    width: 100px;
-    height: 35px; 
-    background: var(--surface-inner); 
-    border-radius: 40px;
-    opacity: 0.75; 
-    -webkit-transition: 0.2s; 
-    transition: opacity .2s;
-    cursor: pointer;
-}
-
-.slider:hover {
-  opacity: 1; 
-}
-
-.slider::-webkit-slider-thumb {
-    background: var(--thumb-image) center/contain no-repeat;
-}
-  
-.slider::-moz-range-thumb {
-    background: var(--thumb-image) center/contain no-repeat;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--thumb-image) center/contain no-repeat;
-    border: none;
-    cursor: pointer;
-  }
-  
-.slider::-moz-range-thumb {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--thumb-image) center/contain no-repeat;
-    border: none;
-    cursor: pointer;
-}
-
-/* Page Selector */
-nav .center a {
-    display: inline-flex;
-    align-items: center;
-    font-size: 1.4rem;
-    font-weight: 500;
+/* Theme Toggle Button */
+.theme-toggle {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    background: transparent;
     color: var(--text-secondary);
-    position: relative;
-    padding: 6px 8px;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-nav .center a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 3px;
-  background: var(--primary);
-  transition: width 0.25s ease;
+.theme-toggle:hover {
+    color: var(--text-primary);
 }
 
-nav .center a:hover::after {
-  width: 100%;
-}
 
 /* Language Segmented Control */
 
@@ -620,7 +642,7 @@ nav .right a span{
             /* Projects */
 
 .projects-box{
-    margin: 10px;
+    margin: 40px;
     width: 100%;
     max-width: clamp(620px, 45vw, 860px);
     padding-bottom: 100px;
@@ -705,7 +727,6 @@ nav .right a span{
     line-height: 1.4;
     max-width: 40ch;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -941,10 +962,7 @@ nav .right a span{
         padding: 4px 6px;
     }
 
-    .slider {
-        width: 100px;
-        margin-left: 0;
-    }
+
 
     .lang-switch {
         margin-right: 0;
@@ -1028,17 +1046,6 @@ nav .right a span{
 
     nav .center a {
         font-size: 0.95rem;
-    }
-
-    .slider {
-        width: 100px;
-        height: 35px;
-    }
-
-    .slider::-webkit-slider-thumb,
-    .slider::-moz-range-thumb {
-        width: 35px;
-        height: 35px;
     }
 
     .lang-btn {

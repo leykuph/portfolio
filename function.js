@@ -1,96 +1,52 @@
 
-const slider = document.getElementById('dark-light-slider');
-
-function updateThumb(value) {
-  let emojiSvg;
-
-  if (value < 50) {
-    emojiSvg = `data:image/svg+xml,` + encodeURIComponent(`
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-        <circle cx="20" cy="20" r="12" fill="#AF87D7"/>
-        <circle cx="24" cy="16" r="10" fill="#2A2342"/>
-      </svg>
-    `);
-  } else {
-    emojiSvg = `data:image/svg+xml,` + encodeURIComponent(`
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-        <circle cx="20" cy="20" r="8" fill="#E19B5A"/>
-        <g stroke="#E19B5A" stroke-width="2.6" stroke-linecap="round">
-          <line x1="20" y1="4" x2="20" y2="10"/>
-          <line x1="20" y1="30" x2="20" y2="36"/>
-          <line x1="4" y1="20" x2="10" y2="20"/>
-          <line x1="30" y1="20" x2="36" y2="20"/>
-          <line x1="8.7" y1="8.7" x2="13.1" y2="13.1"/>
-          <line x1="26.9" y1="26.9" x2="31.3" y2="31.3"/>
-          <line x1="8.7" y1="31.3" x2="13.1" y2="26.9"/>
-          <line x1="26.9" y1="13.1" x2="31.3" y2="8.7"/>
-        </g>
-      </svg>
-    `);
-  }
-
-  slider.style.setProperty('--thumb-image', `url('${emojiSvg}')`);
+function openNav() {
+  document.getElementById("mySidenav").style.width = "275px";
+  document.getElementById("sidenavOverlay").classList.add("active");
+  sessionStorage.setItem('sidenavOpen', 'true');
 }
 
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("sidenavOverlay").classList.remove("active");
+  sessionStorage.setItem('sidenavOpen', 'false');
+}
 
- // save selected theme
+// Restore sidenav state on page load (no animation)
+if (sessionStorage.getItem('sidenavOpen') === 'true') {
+  const nav = document.getElementById("mySidenav");
+  const overlay = document.getElementById("sidenavOverlay");
+  nav.style.transition = 'none';
+  overlay.style.transition = 'none';
+  nav.style.width = "275px";
+  overlay.classList.add("active");
+  // Re-enable transitions after paint
+  requestAnimationFrame(() => {
+    nav.style.transition = '';
+    overlay.style.transition = '';
+  });
+}
+
+// Theme toggle
+function updateToggleButton() {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  const isLight = document.body.classList.contains('light-theme');
+  btn.innerHTML = isLight
+    ? '<i class="fa-solid fa-sun"></i>'
+    : '<i class="fa-solid fa-moon"></i>';
+}
+
+function toggleTheme() {
+  const isLight = document.body.classList.toggle('light-theme');
+  localStorage.setItem('siteTheme', isLight ? 'light' : 'dark');
+  updateToggleButton();
+}
 
 const themeSaved = localStorage.getItem('siteTheme');
-
 if (themeSaved === 'light') {
-  slider.value = 100;
   document.body.classList.add('light-theme');
-} else {
-  slider.value = 0;
-  document.body.classList.remove('light-theme');
 }
-
-function updateTheme(value) {
-  if (value < 50) {
-    document.body.classList.remove('light-theme');
-    localStorage.setItem('siteTheme', 'dark');
-  } else {
-    document.body.classList.add('light-theme');
-    localStorage.setItem('siteTheme', 'light');
-  }
-}
-
-
-function updateTrackFill(value) {
-  const percent = value;
-  slider.style.background = `
-    linear-gradient(
-      to right,
-      var(--primary) ${percent}%,
-      var(--surface-inner) ${percent}%
-    )
-  `;
-}
-
-function snapToNearest() {
-  const value = parseInt(slider.value);
-  if (value < 50) {
-    slider.value = 0;
-  } else {
-    slider.value = 100;
-  }
-  updateThumb(slider.value);
-  updateTheme(slider.value);
-  updateTrackFill(slider.value);
-}
-
-updateThumb(slider.value);
-updateTheme(slider.value);
-updateTrackFill(slider.value);
-
-slider.addEventListener('input', () => {
-  updateThumb(slider.value);
-  updateTheme(slider.value);
-  updateTrackFill(slider.value);
-});
-
-slider.addEventListener('change', snapToNearest); 
-slider.addEventListener('touchend', snapToNearest); 
+updateToggleButton();
 
 
 // Translations
