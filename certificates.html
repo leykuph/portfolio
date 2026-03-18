@@ -4,7 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css?v=20260318">
 
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -14,51 +16,51 @@
 
 <title>Certifications | Bedirhan</title>
 </head>
-<body>
+<body id="certifications-page">
 
-<!-- NAVBAR -->
-    <nav>
-        <div class="left">
-            <div id="mySidenav" class="sidenav">
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="index.html"><i class="fa-solid fa-house"></i> Main Page</a>
-                  <a href="certificates.html"><i class="fa-solid fa-graduation-cap"></i> Certifications</a>
-                  <a href="#"><i class="fa-solid fa-file"></i> Projects</a>
-                  <a href="#"><i class="fa-solid fa-envelope"></i> Contact</a>
-                  <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
-                    <i class="fa-solid fa-moon"></i> Dark Mode
+    <button class="menu-btn" onclick="toggleMobileNav()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="sidenav-overlay" onclick="toggleMobileNav()"></div>
+
+<!-- SIDENAV -->
+    <div id="mySidenav" class="sidenav">
+          <a href="index.html"><i class="fa-solid fa-house"></i><span id="nav-home">Main Page</span></a>
+          <a href="certificates.html" class="sidenav-active"><i class="fa-solid fa-graduation-cap"></i><span id="nav-cert">Certifications</span></a>
+          <a href="projects.html"><i class="fa-solid fa-file"></i><span id="nav-projects">Projects</span></a>
+          <div class="sidenav-bottom">
+              <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <div class="lang-dropdown">
+                  <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+                      <i class="fa-solid fa-globe"></i>
+                      <span class="lang-label">English</span>
+                      <i class="fa-solid fa-chevron-down lang-arrow"></i>
                   </button>
-            </div>
-            <div id="sidenavOverlay" class="sidenav-overlay" onclick="closeNav()"></div>
-            <h2 onclick="openNav()"><i class="fa-solid fa-bars"></i></h2>
-        </div>
-
-        <div class="right">
-            <div class="lang-switch">
-                <button class="lang-btn active-lang" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="tr">TR</button>
-                <button class="lang-btn" data-lang="jp">JP</button>
-            </div>
-        </div>
-        
-    </nav>
+                  <div class="lang-dropdown-menu">
+                      <button class="lang-option active-lang" data-lang="en">
+                          <span class="lang-dot"></span>English
+                      </button>
+                      <button class="lang-option" data-lang="tr">
+                          <span class="lang-dot"></span>Türkçe
+                      </button>
+                      <button class="lang-option" data-lang="jp">
+                          <span class="lang-dot"></span>日本語
+                      </button>
+                  </div>
+              </div>
+          </div>
+    </div>
 
     <!-- Hero Section -->
      
 
-    <main class="section">
-        <section class="section" style="padding-bottom:40px;">
-            <div class="herotext" style="max-width:800px;text-align:left;">
-                <h1 id="cert-heading" style="font-size:42px;margin-bottom:12px;">
-                    Achievements &amp; <span style="color:var(--primary);">Certifications</span>
-                </h1>
-                <p id="cert-description" style="color:var(--text-secondary);font-size:18px;margin-bottom:30px;">
-                    A curated collection of my professional milestones and technical certifications 
-                    in the field of Cybersecurity and Computer Engineering.
-                </p>
-            </div>
-        
-            <div class="search" style="margin-top:10px;" data-translate-placeholder="certSearch">
+    <main>
+        <section class="section header-section">
+            <h1 id="cert-heading">Achievements & <span class="text-primary">Certifications</span></h1>
+            <p id="cert-description">A curated collection of my professional milestones and technical certifications in the field of Cybersecurity and Computer Engineering.</p>
+            <div class="search" data-translate-placeholder="certSearch">
                 <input id="search-bar" type="text" placeholder="Search certifications (e.g. Security, Cloud)..."/>
             </div>
         </section>

@@ -6,7 +6,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260318">
 
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,33 +15,40 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class = "left">
-            <div id="mySidenav" class="sidenav">
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="index.html"><i class="fa-solid fa-house"></i> Main Page</a>
-                  <a href="certificates.html"><i class="fa-solid fa-graduation-cap"></i> Certifications</a>
-                  <a href="#"><i class="fa-solid fa-file"></i> Projects</a>
-                  <a href="#"><i class="fa-solid fa-envelope"></i> Contact</a>
-                  <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
-                    <i class="fa-solid fa-moon"></i> Dark Mode
+    <button class="menu-btn" onclick="toggleMobileNav()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="sidenav-overlay" onclick="toggleMobileNav()"></div>
+
+    <!-- SIDENAV -->
+    <div id="mySidenav" class="sidenav">
+          <a href="index.html" class="sidenav-active"><i class="fa-solid fa-house"></i><span id="nav-home">Main Page</span></a>
+          <a href="certificates.html"><i class="fa-solid fa-graduation-cap"></i><span id="nav-cert">Certifications</span></a>
+          <a href="projects.html"><i class="fa-solid fa-file"></i><span id="nav-projects">Projects</span></a>
+          <div class="sidenav-bottom">
+              <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <div class="lang-dropdown">
+                  <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+                      <i class="fa-solid fa-globe"></i>
+                      <span class="lang-label">English</span>
+                      <i class="fa-solid fa-chevron-down lang-arrow"></i>
                   </button>
-            </div>
-          
-            <div id="sidenavOverlay" class="sidenav-overlay" onclick="closeNav()"></div>
-            <h2 onclick="openNav()"><i class="fa-solid fa-bars"></i></h2>
-      </div>
-
-
-        <div class="right">
-            <div class="lang-switch">
-                <button class="lang-btn active-lang" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="tr">TR</button>
-                <button class="lang-btn" data-lang="jp">JP</button>
-            </div>
-        </div>
-    </nav>
+                  <div class="lang-dropdown-menu">
+                      <button class="lang-option active-lang" data-lang="en">
+                          <span class="lang-dot"></span>English
+                      </button>
+                      <button class="lang-option" data-lang="tr">
+                          <span class="lang-dot"></span>Türkçe
+                      </button>
+                      <button class="lang-option" data-lang="jp">
+                          <span class="lang-dot"></span>日本語
+                      </button>
+                  </div>
+              </div>
+          </div>
+    </div>
 
 
     <main>
@@ -170,19 +177,20 @@
             <div class="split">
                 
 
-                <section id="about-me" class="about-me-box">
-                  <section class="about-me-title">
-                        <div class="mini-line"></div>
-                        <h4 id="about-me-title" class="about-me-text"><b>About Me</b></h4>
-                  </section>
+                  <section id="about-me" class="about-me-box">
+                        <section class="about-me-title">
+                              <div class="mini-line"></div>
+                              <h4 id="about-me-title" class="about-me-text"><b>About Me</b></h4>
+                        </section>
 
-                  <div class="card-container">
-                    <div class="card">
-                        <p id="about-me-p1">I'm a third year Computer Engineering student aiming to build a career in Blue Team cybersecurity and IT infrastructure. My primary interest lies in defensive security monitoring systems, analyzing logs, hardening configurations, and improving overall infrastructure resilience.</p>
-                        <p id="about-me-p2">I work extensively with Linux-based environments and actively develop practical knowledge in networking fundamentals, system administration, and security tooling. I am particularly interested in how operating systems, network layers, and services interact from a defensive perspective.</p>
-                        <p id="about-me-p3">My long-term goal is to specialize in security operations, incident detection and response, and infrastructure protection, contributing to environments where reliability, visibility, and system integrity are critical.</p>
-                    </div>
-                  </div>
+                        <div class="card-container">
+                        <div class="card">
+                              <p id="about-me-p1">I'm a third year Computer Engineering student aiming to build a career in Blue Team cybersecurity and IT infrastructure. My primary interest lies in defensive security monitoring systems, analyzing logs, hardening configurations, and improving overall infrastructure resilience.</p>
+                              <p id="about-me-p2">I work extensively with Linux-based environments and actively develop practical knowledge in networking fundamentals, system administration, and security tooling. I am particularly interested in how operating systems, network layers, and services interact from a defensive perspective.</p>
+                              <p id="about-me-p3">My long-term goal is to specialize in security operations, incident detection and response, and infrastructure protection, contributing to environments where reliability, visibility, and system integrity are critical.</p>
+                        </div>
+                        </div>
+                  </section>
 
                   <section id="experience" class="experience-section">
                         <section class="experience-title">
@@ -194,7 +202,7 @@
                               <article class="experience-item current">
                                     <p id="exp-period-1" class="experience-period">6-MONTH PERIOD</p>
                                     <h5 id="exp-role-1">Vehicle ECU Coding</h5>
-                                    <p id="exp-company-1" class="experience-company">Hands-on work with my dad</p>
+                                    <p id="exp-company-1" class="experience-company">Hands-on work with automobiles</p>
                                     <ul>
                                           <li id="exp-bullet-1">Worked on vehicle ECU coding tasks and practical troubleshooting.</li>
                                           <li id="exp-bullet-2">Learned calibration logic, diagnostics, and workflow discipline.</li>
@@ -203,64 +211,6 @@
                               </article>
                         </div>
                   </section>
-                </section>
-
-                 
-                <section id="projects" class="projects-box">
-                        <section class="projects-title">
-                              <div class="mini-line"></div>  
-                              <h4 id="projects-text"><b>Featured Projects</b></h4>
-                        </section>
-
-                        <div class="card-container">
-                              <section class="featured-project-card">
-                                    <div class="featured-project-media">
-                                          <img loading="lazy" src="images/ai-interior.png" alt="Project preview for AI Interior app">
-                                    </div>
-                                    <div class="featured-project-content">
-                                          <h5>Interior AI</h5>
-                                          <p id="project-desc-1">
-                                          An AI-powered interior design app that generates room concepts from user prompts.
-                                          It combines generation, style presets, and user feedback to iterate designs quickly.
-                                          </p>
-                                          <div class="project-tags">
-                                          <span>JavaScript</span>
-                                          <span>OpenAI API</span>
-                                          <span>Wiro</span>
-                                          </div>
-                                          <div class="project-actions">
-                                          <a id="view-code-1" href="https://github.com/leykuph/ai-interior/" target="_blank" rel="noopener noreferrer" class="btn-primary">View Code</a>                                   
-                                          </div>
-                                    </div>
-                              </section>
-                        </div>
-
-                        <div class="card-container">
-                              <section class="featured-project-card">
-                                    <div class = "featured-project-media">
-                                          <img loading="lazy" src="images/login-app.png" alt="Project preview for login-app">
-                                    </div>
-                                    <div class="featured-project-content">
-                                          <h5>Authentication</h5>
-                                          <p id="project-desc-2">
-                                                A secure, full-stack web application featuring Spring Boot for the backend and a modern HTML/CSS/JS frontend. It implements JWT-based authentication with a premium, responsive UI.
-                                          </p>
-                                          <div class="project-tags">
-                                                <span>Java</span>
-                                                <span>JavaScript</span>
-                                                <span>Spring Boot</span>
-                                                <span>PostgreSQL</span>
-                                          </div>
-                                          <div class="project-actions">
-                                                <a id="view-code-2" href="https://github.com/leykuph/AuthenticationProject" target="_blank" rel="noopener noreferrer" class="btn-primary">View Code</a>                                   
-                                          </div>
-                                    </div>
-                              </section>
-                        </div>
-                                          
-                        <a id="view-all-projects" href="https://github.com/leykuph/" target="_blank" rel="noopener noreferrer" class="btn-primary">View all projects on github <i class="fa-solid fa-arrow-right"></i> </a>
-                  </section>
-
             </div>
     </main>
     <script src="function.js?v=20260216"></script>

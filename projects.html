@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css?v=20260318">
+
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Projects | Bedirhan</title>
+</head>
+<body id="projects-page">
+
+    <button class="menu-btn" onclick="toggleMobileNav()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="sidenav-overlay" onclick="toggleMobileNav()"></div>
+
+<!-- SIDENAV -->
+    <div id="mySidenav" class="sidenav">
+          <a href="index.html"><i class="fa-solid fa-house"></i><span id="nav-home">Main Page</span></a>
+          <a href="certificates.html"><i class="fa-solid fa-graduation-cap"></i><span id="nav-cert">Certifications</span></a>
+          <a href="projects.html" class="sidenav-active"><i class="fa-solid fa-file"></i><span id="nav-projects">Projects</span></a>
+          <div class="sidenav-bottom">
+              <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+                <i class="fa-solid fa-moon"></i>
+              </button>
+              <div class="lang-dropdown">
+                  <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+                      <i class="fa-solid fa-globe"></i>
+                      <span class="lang-label">English</span>
+                      <i class="fa-solid fa-chevron-down lang-arrow"></i>
+                  </button>
+                  <div class="lang-dropdown-menu">
+                      <button class="lang-option active-lang" data-lang="en">
+                          <span class="lang-dot"></span>English
+                      </button>
+                      <button class="lang-option" data-lang="tr">
+                          <span class="lang-dot"></span>Türkçe
+                      </button>
+                      <button class="lang-option" data-lang="jp">
+                          <span class="lang-dot"></span>日本語
+                      </button>
+                  </div>
+              </div>
+          </div>
+    </div>
+
+    <main class="projects-page">
+        <section class="section header-section">
+            <h1 id="projects-heading">Featured <span class="text-primary">Projects</span></h1>
+            <p id="projects-description">A collection of works ranging from AI integrations to secure full-stack web applications, showcasing my journey in computer engineering.</p>
+        </section>
+
+        <section class="section projects-grid">
+            <!-- Project 1: Interior AI -->
+            <div class="featured-project-card">
+                <div class="featured-project-media">
+                    <img src="images/ai-interior.png" alt="Interior AI Preview">
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>Interior AI</h5>
+                        <span class="project-category">MACHINE LEARNING</span>
+                    </div>
+                    <p id="project-desc-1">An AI-powered interior design application that generates photorealistic room redesigns based on user uploaded photos and style preferences.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>React</span>
+                        <span>Stable Diffusion</span>
+                        <span>FastAPI</span>
+                    </div>
+                    <div class="project-actions">
+                        <a id="view-code-1" href="https://github.com/leykuph/ai-interior/" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Secure Auth -->
+            <div class="featured-project-card">
+                <div class="featured-project-media">
+                    <img src="images/login-app.png" alt="Secure Auth Preview">
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>Secure Auth</h5>
+                        <span class="project-category">FULL-STACK</span>
+                    </div>
+                    <p id="project-desc-2">A comprehensive authentication system featuring JWT implementation, OAuth2 social login, and robust password encryption for enterprise-level applications.</p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>PostgreSQL</span>
+                        <span>Docker</span>
+                    </div>
+                    <div class="project-actions">
+                        <a id="view-code-2" href="https://github.com/leykuph/AuthenticationProject" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Customer Churn Prediction -->
+            <div class="featured-project-card">
+                <div class="featured-project-media">
+                    <img src="images/Churn.png" alt="Customer Churn Prediction Preview">
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>Customer Churn Prediction</h5>
+                        <span class="project-category">MACHINE LEARNING</span>
+                    </div>
+                    <p id="project-desc-3">A machine learning project predicting customer churn using Random Forest and XGBoost with feature selection strategies (RFE, feature importance). Reduces 1,163 features to 23 while preserving performance, evaluated with MCC and F1-Score under class imbalance.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>XGBoost</span>
+                        <span>Random Forest</span>
+                        <span>NumPy</span>
+                    </div>
+                    <div class="project-actions">
+                        <a id="view-code-3" href="https://github.com/leykuph/CustomerChurnPrediction" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: PathFinder -->
+            <div class="featured-project-card">
+                <div class="featured-project-media">
+                    <img src="images/Djikstra.png" alt="PathFinder Preview">
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>PathFinder</h5>
+                        <span class="project-category">ALGORITHMS</span>
+                    </div>
+                    <p id="project-desc-4">A Java application that finds shortest paths between 17 Turkish cities using DFS, DFS-Shortest, and Dijkstra algorithms. Features an interactive Swing GUI and a benchmarking module with custom data structures (stack, dictionary) built from scratch.</p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Swing</span>
+                        <span>Graph Theory</span>
+                        <span>Dijkstra</span>
+                    </div>
+                    <div class="project-actions">
+                        <a id="view-code-4" href="https://github.com/leykuph/Comp-201-Project/" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: dotfiles -->
+            <div class="featured-project-card">
+                <div class="featured-project-media">
+                    <img src="images/dotfiles.png" alt="dotfiles Preview">
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>dotfiles</h5>
+                        <span class="project-category">LINUX / RICING</span>
+                    </div>
+                    <p id="project-desc-7">Arch Linux Hyprland rice with a custom OC Palette theme featuring purple and orange accents on a dark nocturnal aesthetic. Configured with Waybar, Wofi, Kitty, Fish shell, Starship prompt, and managed via a bare git repo.</p>
+                    <div class="project-tags">
+                        <span>Hyprland</span>
+                        <span>Waybar</span>
+                        <span>Arch Linux</span>
+                        <span>Fish</span>
+                    </div>
+                    <div class="project-actions">
+                        <a id="view-code-7" href="https://github.com/leykuph/dotfiles" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: LZW Compression -->
+            <div class="featured-project-card">
+                <div class="featured-project-media">
+                    <img src="images/LZW.png" alt="LZW Compression Preview">
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>LZW Compression</h5>
+                        <span class="project-category">DATA COMPRESSION</span>
+                    </div>
+                    <p id="project-desc-5">A progressive implementation of the Lempel-Ziv-Welch compression algorithm across 6 levels covering text, grayscale, and color image compression with difference encoding. Includes a full Tkinter GUI and metrics like entropy, compression ratio, and lossless verification.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>NumPy</span>
+                        <span>Pillow</span>
+                        <span>Tkinter</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7: Single-Cycle Computer -->
+            <div class="featured-project-card">
+                <div class="featured-project-media">
+                    <img src="images/CPU.png" alt="Single-Cycle Computer Preview">
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>Single-Cycle Computer</h5>
+                        <span class="project-category">DIGITAL DESIGN</span>
+                    </div>
+                    <p id="project-desc-6">A Logisim implementation of a single-cycle computer datapath with eight 4-bit general purpose registers, an ALU supporting arithmetic and logical operations, a shifter, and multiplexed data paths. Includes hard-wired control logic for a 16-bit control word.</p>
+                    <div class="project-tags">
+                        <span>Logisim</span>
+                        <span>ALU</span>
+                        <span>Register File</span>
+                        <span>Datapath</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section footer-cta">
+            <div class="github-prompt">
+                <p id="footer-text">Looking for more? I have dozens of smaller repositories, experiments, and technical notes.</p>
+                <a id="view-all-projects" href="https://github.com/leykuph" target="_blank" rel="noopener noreferrer" class="btn-github-full">
+                    <i class="fa-brands fa-github"></i> View all projects on GitHub
+                </a>
+            </div>
+        </section>
+    </main>
+    <script src="function.js?v=20260216"></script>
+</body>
+</html>
