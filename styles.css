@@ -466,10 +466,12 @@ a {
     border-radius: 999px;
     background: var(--primary);
     color: var(--bg-base);
-    font-size: 1.125rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.125rem);
     font-weight: 700;
     line-height: 1;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     box-shadow: 0 10px 30px rgba(175, 135, 215, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
