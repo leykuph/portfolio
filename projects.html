@@ -6,7 +6,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css?v=20260318">
+    <link rel="stylesheet" href="styles.css?v=20260520">
 
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -51,14 +51,39 @@
     </div>
 
     <main class="projects-page">
-        <section class="section header-section">
+        <section class="section header-section reveal">
             <h1 id="projects-heading">Featured <span class="text-primary">Projects</span></h1>
             <p id="projects-description">A collection of works ranging from AI integrations to secure full-stack web applications, showcasing my journey in computer engineering.</p>
         </section>
 
         <section class="section projects-grid">
-            <!-- Project 1: Interior AI -->
-            <div class="featured-project-card">
+            <!-- Project 1: Deep-Vision -->
+            <div class="featured-project-card reveal">
+                <div class="featured-project-media icon-placeholder">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>Deep-Vision</h5>
+                        <span class="project-category">COMPUTER VISION</span>
+                    </div>
+                    <p id="project-desc-8">Real-time computer-vision facial recognition with a two-phase pipeline (dataset creation → live detection at 30+ FPS). Targets 85%+ accuracy under varied lighting and low-resolution conditions via robust feature extraction.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                        <span>PyTorch</span>
+                        <span>Real-Time</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/leykuph" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> <span class="view-code-label">View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Interior AI -->
+            <div class="featured-project-card reveal">
                 <div class="featured-project-media">
                     <img src="images/ai-interior.png" alt="Interior AI Preview">
                 </div>
@@ -75,15 +100,15 @@
                         <span>FastAPI</span>
                     </div>
                     <div class="project-actions">
-                        <a id="view-code-1" href="https://github.com/leykuph/ai-interior/" target="_blank" rel="noopener noreferrer" class="btn-view-code">
-                            <i class="fa-brands fa-github"></i> View Code
+                        <a href="https://github.com/leykuph/ai-interior/" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> <span class="view-code-label">View Code</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2: Secure Auth -->
-            <div class="featured-project-card">
+            <!-- Project 3: Secure Auth -->
+            <div class="featured-project-card reveal">
                 <div class="featured-project-media">
                     <img src="images/login-app.png" alt="Secure Auth Preview">
                 </div>
@@ -100,15 +125,65 @@
                         <span>Docker</span>
                     </div>
                     <div class="project-actions">
-                        <a id="view-code-2" href="https://github.com/leykuph/AuthenticationProject" target="_blank" rel="noopener noreferrer" class="btn-view-code">
-                            <i class="fa-brands fa-github"></i> View Code
+                        <a href="https://github.com/leykuph/AuthenticationProject" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> <span class="view-code-label">View Code</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3: Customer Churn Prediction -->
-            <div class="featured-project-card">
+            <!-- Project 4: Tetris 2048 -->
+            <div class="featured-project-card reveal">
+                <div class="featured-project-media icon-placeholder">
+                    <img src="images/tetris-2048.png" alt="Tetris 2048 Preview">
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>Tetris 2048</h5>
+                        <span class="project-category">GAME / OOP</span>
+                    </div>
+                    <p id="project-desc-9">A hybrid Tetris + 2048 game on a 20×12 grid with chain-merge logic, hard drop, DAS held-key movement, and next-piece preview. Built in OOP Python with numpy and pygame.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>OOP</span>
+                        <span>numpy</span>
+                        <span>pygame</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/leykuph" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> <span class="view-code-label">View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: COMP302 AI Tutor -->
+            <div class="featured-project-card reveal">
+                <div class="featured-project-media icon-placeholder">
+                    <img src="images/ai-tutor.jpg" alt="COMP302 AI Tutor Preview">
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>COMP302 AI Tutor</h5>
+                        <span class="project-category">EDUCATIONAL AI</span>
+                    </div>
+                    <p id="project-desc-11">A tutoring assistant built for the Software Engineering course. Answers conceptual questions, walks through worked examples, and helps students reason about design decisions.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>LLM</span>
+                        <span>RAG</span>
+                        <span>Edu Tools</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/leykuph" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> <span class="view-code-label">View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Customer Churn Prediction -->
+            <div class="featured-project-card reveal">
                 <div class="featured-project-media">
                     <img src="images/Churn.png" alt="Customer Churn Prediction Preview">
                 </div>
@@ -125,15 +200,15 @@
                         <span>NumPy</span>
                     </div>
                     <div class="project-actions">
-                        <a id="view-code-3" href="https://github.com/leykuph/CustomerChurnPrediction" target="_blank" rel="noopener noreferrer" class="btn-view-code">
-                            <i class="fa-brands fa-github"></i> View Code
+                        <a href="https://github.com/leykuph/CustomerChurnPrediction" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> <span class="view-code-label">View Code</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 4: PathFinder -->
-            <div class="featured-project-card">
+            <!-- Project 6: PathFinder -->
+            <div class="featured-project-card reveal">
                 <div class="featured-project-media">
                     <img src="images/Djikstra.png" alt="PathFinder Preview">
                 </div>
@@ -150,15 +225,40 @@
                         <span>Dijkstra</span>
                     </div>
                     <div class="project-actions">
-                        <a id="view-code-4" href="https://github.com/leykuph/Comp-201-Project/" target="_blank" rel="noopener noreferrer" class="btn-view-code">
-                            <i class="fa-brands fa-github"></i> View Code
+                        <a href="https://github.com/leykuph/Comp-201-Project/" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> <span class="view-code-label">View Code</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 5: dotfiles -->
-            <div class="featured-project-card">
+            <!-- Project 7: Floor is Lava (MIPS) -->
+            <div class="featured-project-card reveal">
+                <div class="featured-project-media icon-placeholder">
+                    <img src="images/floor-is-lava.png" alt="Floor is Lava Preview">
+                </div>
+                <div class="featured-project-content">
+                    <div class="card-header">
+                        <h5>Floor is Lava</h5>
+                        <span class="project-category">MIPS ASSEMBLY</span>
+                    </div>
+                    <p id="project-desc-10">A 2D game written entirely in MIPS Assembly, applying low-level hardware and memory management concepts. Direct framebuffer manipulation and bare-metal control flow.</p>
+                    <div class="project-tags">
+                        <span>MIPS</span>
+                        <span>Assembly</span>
+                        <span>Low-level</span>
+                        <span>MARS</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/leykuph" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> <span class="view-code-label">View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8: dotfiles -->
+            <div class="featured-project-card reveal">
                 <div class="featured-project-media">
                     <img src="images/dotfiles.png" alt="dotfiles Preview">
                 </div>
@@ -175,15 +275,15 @@
                         <span>Fish</span>
                     </div>
                     <div class="project-actions">
-                        <a id="view-code-7" href="https://github.com/leykuph/dotfiles" target="_blank" rel="noopener noreferrer" class="btn-view-code">
-                            <i class="fa-brands fa-github"></i> View Code
+                        <a href="https://github.com/leykuph/dotfiles" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                            <i class="fa-brands fa-github"></i> <span class="view-code-label">View Code</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 6: LZW Compression -->
-            <div class="featured-project-card">
+            <!-- Project 9: LZW Compression -->
+            <div class="featured-project-card reveal">
                 <div class="featured-project-media">
                     <img src="images/LZW.png" alt="LZW Compression Preview">
                 </div>
@@ -202,17 +302,17 @@
                 </div>
             </div>
 
-            <!-- Project 7: Single-Cycle Computer -->
-            <div class="featured-project-card">
+            <!-- Project 10: 8-Bit CPU -->
+            <div class="featured-project-card reveal">
                 <div class="featured-project-media">
-                    <img src="images/CPU.png" alt="Single-Cycle Computer Preview">
+                    <img src="images/CPU.png" alt="8-Bit CPU Preview">
                 </div>
                 <div class="featured-project-content">
                     <div class="card-header">
-                        <h5>Single-Cycle Computer</h5>
+                        <h5>8-Bit CPU Simulation</h5>
                         <span class="project-category">DIGITAL DESIGN</span>
                     </div>
-                    <p id="project-desc-6">A Logisim implementation of a single-cycle computer datapath with eight 4-bit general purpose registers, an ALU supporting arithmetic and logical operations, a shifter, and multiplexed data paths. Includes hard-wired control logic for a 16-bit control word.</p>
+                    <p id="project-desc-6">A Logisim implementation of an 8-bit single-cycle computer datapath: registers, ALU with arithmetic &amp; logical ops, shifter, and multiplexed data paths. Includes hard-wired control logic and instruction handling.</p>
                     <div class="project-tags">
                         <span>Logisim</span>
                         <span>ALU</span>
@@ -223,7 +323,7 @@
             </div>
         </section>
 
-        <section class="section footer-cta">
+        <section class="section footer-cta reveal">
             <div class="github-prompt">
                 <p id="footer-text">Looking for more? I have dozens of smaller repositories, experiments, and technical notes.</p>
                 <a id="view-all-projects" href="https://github.com/leykuph" target="_blank" rel="noopener noreferrer" class="btn-github-full">
@@ -232,6 +332,6 @@
             </div>
         </section>
     </main>
-    <script src="function.js?v=20260216"></script>
+    <script src="function.js?v=20260520"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="styles.css?v=20260318">
+<link rel="stylesheet" href="styles.css?v=20260520">
 
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -53,61 +53,33 @@
           </div>
     </div>
 
-    <!-- Hero Section -->
-     
-
     <main>
-        <section class="section header-section">
-            <h1 id="cert-heading">Achievements & <span class="text-primary">Certifications</span></h1>
+        <section class="section header-section reveal">
+            <h1 id="cert-heading">Achievements &amp; <span class="text-primary">Certifications</span></h1>
             <p id="cert-description">A curated collection of my professional milestones and technical certifications in the field of Cybersecurity and Computer Engineering.</p>
             <div class="search" data-translate-placeholder="certSearch">
                 <input id="search-bar" type="text" placeholder="Search certifications (e.g. Security, Cloud)..."/>
             </div>
         </section>
 
-    
+        <!-- Filter chips -->
+        <div class="cert-filters reveal">
+            <button class="filter-chip active" data-filter="all" data-filter-label="filterAll"><span class="chip-text">All</span></button>
+            <button class="filter-chip" data-filter="cybersecurity" data-filter-label="filterCyber"><span class="chip-text">Cybersecurity</span></button>
+            <button class="filter-chip" data-filter="cloud" data-filter-label="filterCloud"><span class="chip-text">Cloud &amp; Infra</span></button>
+            <button class="filter-chip" data-filter="dev" data-filter-label="filterDev"><span class="chip-text">Dev &amp; PM</span></button>
+            <button class="filter-chip" data-filter="programming" data-filter-label="filterProgramming"><span class="chip-text">Programming</span></button>
+            <button class="filter-chip" data-filter="mobile" data-filter-label="filterMobile"><span class="chip-text">Mobile</span></button>
+        </div>
+
     <!-- Certificates Section  -->
 
 
-    <div class="cert-grid">
-        <div class="cert-card">
-            <div class="cert-content">
-                <h3>Python for Beginners: Data Structures</h3>
-                <p>Coursera - 2024</p>
-                <a href="https://coursera.org/share/f6b72a716fd0e169627786abfda0e96a" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </div>
-            <div class="cert-image">
-                <img src="images/Coursera.png" alt="Coursera Logo">
-            </div>
-        </div>
-
-
-        <div class="cert-card">
-            <div class="cert-content">
-                <h3>Connect and Protect: Networks and Network Security</h3>
-                <p>Google - 2025</p>
-                <a href="https://coursera.org/share/5a269c47f94695865b485f73ab32690f" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </div>
-            <div class="cert-image">
-                <img src="images/Google.png" alt="Google Logo">
-            </div>
-        </div>
-
-        <div class="cert-card">
-            <div class="cert-content">
-                <h3>Play It Safe: Manage Security Risks</h3>
-                <p>Google - 2025</p>
-                <a href="https://coursera.org/share/0b2420be8712322559658186021e0f31" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </div>
-            <div class="cert-image">
-                <img src="images/Google.png" alt="Google Logo">
-            </div>
-        </div>
-
-        <div class="cert-card">
+    <div class="cert-grid reveal">
+        <div class="cert-card" data-category="cybersecurity">
             <div class="cert-content">
                 <h3>Foundations of Cybersecurity</h3>
-                <p>Google - 2025</p>
+                <p>Google &middot; Oct 2024</p>
                 <a href="https://coursera.org/share/440612f2b757ad2f6c4af95903c92865" target="_blank" rel="noopener noreferrer">View Certificate</a>
             </div>
             <div class="cert-image">
@@ -115,33 +87,32 @@
             </div>
         </div>
 
-        <div class="cert-card">
+        <div class="cert-card" data-category="cybersecurity">
             <div class="cert-content">
-                <h3>Concepts in Python: Loops, Functions and Returns</h3>
-                <p>Coursera - 2024</p>
-                <a href="https://coursera.org/share/ebf7a4e4edc58274021e3658e43d1ba0" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                <h3>Play It Safe: Manage Security Risks</h3>
+                <p>Google &middot; Nov 2024</p>
+                <a href="https://coursera.org/share/0b2420be8712322559658186021e0f31" target="_blank" rel="noopener noreferrer">View Certificate</a>
             </div>
             <div class="cert-image">
-                <img src="images/Coursera.png" alt="Coursera Logo">
+                <img src="images/Google.png" alt="Google Logo">
             </div>
         </div>
 
-
-        <div class="cert-card">
+        <div class="cert-card" data-category="cybersecurity">
             <div class="cert-content">
-                <h3>Python Basics: Create a Guessing Number Game from Scratch</h3>
-                <p>Coursera - 2025</p>
-                <a href="https://coursera.org/share/410ab52c8fe9b5041ff3fad7b8b4d9e0" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                <h3>Connect and Protect: Networks and Network Security</h3>
+                <p>Google &middot; Feb 2025</p>
+                <a href="https://coursera.org/share/5a269c47f94695865b485f73ab32690f" target="_blank" rel="noopener noreferrer">View Certificate</a>
             </div>
             <div class="cert-image">
-                <img src="images/Coursera.png" alt="Coursera Logo">
+                <img src="images/Google.png" alt="Google Logo">
             </div>
         </div>
 
-        <div class="cert-card">
+        <div class="cert-card" data-category="cybersecurity">
             <div class="cert-content">
                 <h3>DDoS Attacks and Defenses</h3>
-                <p>University of Colorado System - 2025</p>
+                <p>University of Colorado System &middot; Jul 2025</p>
                 <a href="https://coursera.org/share/6282eadf3879fd9cb5ce481fbab71164" target="_blank" rel="noopener noreferrer">View Certificate</a>
             </div>
             <div class="cert-image">
@@ -149,88 +120,10 @@
             </div>
         </div>
 
-        <div class="cert-card">
-            <div class="cert-content">
-                <h3>Get Started with iOS App Development </h3>
-                <p>SkillUp - 2025</p>
-                <a href="https://coursera.org/share/4b42953da01c5f4b63ddc52eb896b901" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </div>
-            <div class="cert-image">
-                <img src="images/Skillup.png" alt="Skillup Logo">
-            </div>
-        </div>
-
-        <div class="cert-card">
-            <div class="cert-content">
-                <h3>Computer Networks and Network Security</h3>
-                <p>IBM - 2025</p>
-                <a href="https://coursera.org/share/50f833ed585907b22fcb21c65800c2b6" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </div>
-            <div class="cert-image">
-                <img src="images/IBM.png" alt="IBM Logo">
-            </div>
-        </div>
-
-
-        <div class="cert-card">
-            <div class="cert-content">
-                <h3>Cybersecurity Case Studies and Capstone Project</h3>
-                <p>IBM - 2025</p>
-                <a href="https://coursera.org/share/9e221f774d98ba3f70a65e7dda57d8b6" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </div>
-            <div class="cert-image">
-                <img src="images/IBM.png" alt="IBM Logo">
-            </div>
-        </div>
-
-        <div class="cert-card">
-            <div class="cert-content">
-                <h3>Get Started with Android App Development</h3>
-                <p>SkillUp - 2025</p>
-                <a href="https://coursera.org/share/894f11d4ef5e568f2f8674cfe491edbf" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </div>
-            <div class="cert-image">
-                <img src="images/Skillup.png" alt="Skillup Logo">
-            </div>
-        </div>
-
-        <div class="cert-card">
-            <div class="cert-content">
-                <h3>Cloud Computing Foundations</h3>
-                <p>Duke University - 2025</p>
-                <a href="https://coursera.org/share/53a9bf216064bb93b265358bb6ba1eef" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </div>
-            <div class="cert-image">
-                <img src="images/Duke.png" alt="Duke Logo">
-            </div>
-        </div>
-
-        <div class="cert-card">
-            <div class="cert-content">
-                <h3>Penetration Testing, Threat Hunting, and Cryptography</h3>
-                <p>IBM - 2025</p>
-                <a href="https://coursera.org/share/eb1bc2cc045bde6447273d684c9686c1" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </div>
-            <div class="cert-image">
-                <img src="images/IBM.png" alt="IBM Logo">
-            </div>
-        </div>
-
-        <div class="cert-card">
-            <div class="cert-content">
-                <h3>Tools of the Trade: Linux and SQL</h3>
-                <p>University of Colorado System - 2025</p>
-                <a href="https://coursera.org/share/12b16fa9d1e7c03561ef0fb6c6ef8258" target="_blank" rel="noopener noreferrer">View Certificate</a>
-            </div>
-            <div class="cert-image">
-                <img src="images/Google.png" alt="Google Logo">
-            </div>
-        </div>
-
-        <div class="cert-card">
+        <div class="cert-card" data-category="cybersecurity">
             <div class="cert-content">
                 <h3>Cloud Computing Security</h3>
-                <p>University of Colorado System - 2025</p>
+                <p>University of Colorado System &middot; Aug 2025</p>
                 <a href="https://coursera.org/share/9aadecb12cd012faa6dbd2209f2c5610" target="_blank" rel="noopener noreferrer">View Certificate</a>
             </div>
             <div class="cert-image">
@@ -238,36 +131,172 @@
             </div>
         </div>
 
-        <div class="cert-card">
+        <div class="cert-card" data-category="cybersecurity">
+            <div class="cert-content">
+                <h3>Computer Networks and Network Security</h3>
+                <p>IBM &middot; Aug 2025</p>
+                <a href="https://coursera.org/share/50f833ed585907b22fcb21c65800c2b6" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/IBM.png" alt="IBM Logo">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="cybersecurity">
             <div class="cert-content">
                 <h3>Operating Systems: Overview, Administration, and Security</h3>
-                <p>IBM - 2025</p>
+                <p>IBM &middot; Aug 2025</p>
                 <a href="https://coursera.org/share/b7e8909c36bf4e4cda3a6dbdd28a4bed" target="_blank" rel="noopener noreferrer">View Certificate</a>
             </div>
             <div class="cert-image">
                 <img src="images/IBM.png" alt="IBM Logo">
             </div>
         </div>
+
+        <div class="cert-card" data-category="cybersecurity">
+            <div class="cert-content">
+                <h3>Penetration Testing, Threat Hunting, and Cryptography</h3>
+                <p>IBM &middot; Aug 2025</p>
+                <a href="https://coursera.org/share/eb1bc2cc045bde6447273d684c9686c1" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/IBM.png" alt="IBM Logo">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="cybersecurity">
+            <div class="cert-content">
+                <h3>Cybersecurity Case Studies and Capstone Project</h3>
+                <p>IBM &middot; Aug 2025</p>
+                <a href="https://coursera.org/share/9e221f774d98ba3f70a65e7dda57d8b6" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/IBM.png" alt="IBM Logo">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="cloud">
+            <div class="cert-content">
+                <h3>Tools of the Trade: Linux and SQL</h3>
+                <p>Google &middot; Mar 2025</p>
+                <a href="https://coursera.org/share/12b16fa9d1e7c03561ef0fb6c6ef8258" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/Google.png" alt="Google Logo">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="cloud">
+            <div class="cert-content">
+                <h3>Cloud Computing Foundations</h3>
+                <p>Duke University &middot; Aug 2025</p>
+                <a href="https://coursera.org/share/53a9bf216064bb93b265358bb6ba1eef" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/Duke.png" alt="Duke Logo">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="dev">
+            <div class="cert-content">
+                <h3>Test Driven Development in Java</h3>
+                <p>Coursera &middot; May 2026</p>
+                <a href="https://www.linkedin.com/in/leykuph/" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/Coursera.png" alt="Coursera Logo">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="dev">
+            <div class="cert-content">
+                <h3>Agile Software Dev: Scrum for Developers</h3>
+                <p>LinkedIn &middot; May 2026</p>
+                <a href="https://www.linkedin.com/in/leykuph/" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/IBM.png" alt="LinkedIn">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="dev">
+            <div class="cert-content">
+                <h3>Software Design: Modeling with UML</h3>
+                <p>LinkedIn &middot; May 2026</p>
+                <a href="https://www.linkedin.com/in/leykuph/" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/IBM.png" alt="LinkedIn">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="dev">
+            <div class="cert-content">
+                <h3>Agile PM with Jira Cloud</h3>
+                <p>LinkedIn &middot; May 2026</p>
+                <a href="https://www.linkedin.com/in/leykuph/" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/IBM.png" alt="LinkedIn">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="programming">
+            <div class="cert-content">
+                <h3>Python for Beginners: Data Structures</h3>
+                <p>Coursera &middot; 2024</p>
+                <a href="https://coursera.org/share/f6b72a716fd0e169627786abfda0e96a" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/Coursera.png" alt="Coursera Logo">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="programming">
+            <div class="cert-content">
+                <h3>Concepts in Python: Loops, Functions and Returns</h3>
+                <p>Coursera &middot; 2024</p>
+                <a href="https://coursera.org/share/ebf7a4e4edc58274021e3658e43d1ba0" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/Coursera.png" alt="Coursera Logo">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="programming">
+            <div class="cert-content">
+                <h3>Python Basics: Create a Guessing Number Game from Scratch</h3>
+                <p>Coursera &middot; 2025</p>
+                <a href="https://coursera.org/share/410ab52c8fe9b5041ff3fad7b8b4d9e0" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/Coursera.png" alt="Coursera Logo">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="mobile">
+            <div class="cert-content">
+                <h3>Get Started with iOS App Development</h3>
+                <p>SkillUp &middot; 2025</p>
+                <a href="https://coursera.org/share/4b42953da01c5f4b63ddc52eb896b901" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/Skillup.png" alt="Skillup Logo">
+            </div>
+        </div>
+
+        <div class="cert-card" data-category="mobile">
+            <div class="cert-content">
+                <h3>Get Started with Android App Development</h3>
+                <p>SkillUp &middot; 2025</p>
+                <a href="https://coursera.org/share/894f11d4ef5e568f2f8674cfe491edbf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+            <div class="cert-image">
+                <img src="images/Skillup.png" alt="Skillup Logo">
+            </div>
+        </div>
     </div>
   </main>
-    <script src="function.js?v=20260216"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        
-        const searchInput = document.getElementById('search-bar');
-        const cards = document.querySelectorAll('.cert-card');
-      
-        if (!searchInput) return;
-      
-        searchInput.addEventListener('input', function () {
-          const query = this.value.toLowerCase().trim();
-      
-          cards.forEach(card => {
-            const text = card.innerText.toLowerCase();
-            card.style.display = text.includes(query) ? 'flex' : 'none';
-          });
-        });
-      
-      });</script>
+    <script src="function.js?v=20260520"></script>
 </body>
 </html>

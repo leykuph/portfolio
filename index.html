@@ -6,7 +6,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css?v=20260318">
+    <link rel="stylesheet" href="styles.css?v=20260520">
 
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -60,29 +60,39 @@
                 </div>
                 <div class="text">
                     <h2 id="hero-heading">Hi, I'm <span class="text-primary" id="name">Bedirhan.</span></h2>
-                    <p id="occupation">Computer Engineering Student</p>
-                    <p id="occupation-2">(Preparing To Be Cybersecurity Analyst)</p>     
-                    <h3><i class="fa-solid fa-location-pin"></i> <span id="location-text">Istanbul, Turkey</span></h3>  
+                    <p id="occupation">Computer Engineering Student @ MEF University</p>
+                    <p class="typewriter-line">
+                        <span class="typewriter" id="typewriter"></span><span class="typewriter-caret"></span>
+                    </p>
+                    <h3><i class="fa-solid fa-location-pin"></i> <span id="location-text">Istanbul, Turkey</span></h3>
                     <a href="https://www.linkedin.com/in/leykuph/" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin"></i> </a>
                     <a href="https://github.com/leykuph" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
                     <a href="mailto:leykuph@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
                     <a href="https://x.com/leykuph" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
                     <a href="https://www.instagram.com/leykuph/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                    
+
                 </div>
             </section>
-            <section class="cv-section"> 
+            <section class="cv-section">
                   <div class="cv">
-                        <a id="cv" href="images/CV.pdf" download>Download Public CV <i class="fa-solid fa-download"></i></a>
+                        <a id="cv" href="public-cv.html" target="_blank" rel="noopener noreferrer">See Public CV <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                   </div>
                   <div class="info">
                         <h5 id="cv-info">For unredacted CV please reach me from SNS</h5>
                   </div>
             </section>
         </div>
+
+        <!-- Divider -->
+        <div class="section-divider reveal">
+            <span class="divider-line"></span>
+            <span class="divider-glyph"><i class="fa-solid fa-code"></i></span>
+            <span class="divider-label" id="divider-skills">Stack</span>
+            <span class="divider-line"></span>
+        </div>
+
             <!-- Section 3 - Skills -->
-                <section id="skills" class="skills-section">
-                  <div class="skills-line"></div>
+                <section id="skills" class="skills-section reveal">
                     <h2 id="skills-heading">Skills</h2>
 
                     <div class="carousel">
@@ -107,10 +117,10 @@
                         </div>
                         <div class="card"><img loading="lazy" src="images/swift.png" alt="swift logo">
                               <span>Swift</span>
-                        </div>  
+                        </div>
                         <div class="card"><img loading="lazy" src="images/Bash.png" alt="bash logo">
                               <span>Bash</span>
-                        </div>  
+                        </div>
 
 
                         <!-- duplicate -->
@@ -134,11 +144,11 @@
                         </div>
                         <div class="card"><img loading="lazy" src="images/swift.png" alt="swift logo">
                               <span>Swift</span>
-                        </div>  
+                        </div>
                         <div class="card"><img loading="lazy" src="images/Bash.png" alt="bash logo">
                               <span>Bash</span>
-                        </div> 
-                        
+                        </div>
+
 
                           <!-- duplicate 2-->
                         <div class="card"><img loading="lazy" src="images/html.webp" alt="html logo">
@@ -161,38 +171,103 @@
                         </div>
                         <div class="card"><img loading="lazy" src="images/swift.png" alt="swift logo">
                               <span>Swift</span>
-                        </div>  
+                        </div>
                         <div class="card"><img loading="lazy" src="images/Bash.png" alt="bash logo">
                               <span>Bash</span>
-                        </div> 
+                        </div>
                       </div>
                     </div>
-                    <div class="skills-line"></div>
-                    
+
                 </section>
 
-                  
+            <!-- Divider -->
+            <div class="section-divider reveal">
+                <span class="divider-line"></span>
+                <span class="divider-glyph"><i class="fa-solid fa-user"></i></span>
+                <span class="divider-label" id="divider-profile">Profile</span>
+                <span class="divider-line"></span>
+            </div>
 
 
             <div class="split">
-                
 
-                  <section id="about-me" class="about-me-box">
+
+                  <section id="about-me" class="about-me-box reveal">
                         <section class="about-me-title">
                               <div class="mini-line"></div>
                               <h4 id="about-me-title" class="about-me-text"><b>About Me</b></h4>
                         </section>
 
-                        <div class="card-container">
-                        <div class="card">
-                              <p id="about-me-p1">I'm a third year Computer Engineering student aiming to build a career in Blue Team cybersecurity and IT infrastructure. My primary interest lies in defensive security monitoring systems, analyzing logs, hardening configurations, and improving overall infrastructure resilience.</p>
-                              <p id="about-me-p2">I work extensively with Linux-based environments and actively develop practical knowledge in networking fundamentals, system administration, and security tooling. I am particularly interested in how operating systems, network layers, and services interact from a defensive perspective.</p>
-                              <p id="about-me-p3">My long-term goal is to specialize in security operations, incident detection and response, and infrastructure protection, contributing to environments where reliability, visibility, and system integrity are critical.</p>
-                        </div>
+                        <div class="about-me-grid">
+                            <div class="card-container">
+                                <div class="card">
+                                      <p id="about-me-p1">I'm a third-year Computer Engineering student at MEF University, focused on Blue Team cybersecurity and IT infrastructure. My main interest is defensive security monitoring &mdash; log analysis, hardening configurations, and improving infrastructure resilience.</p>
+                                      <p id="about-me-p2">I work daily in Linux-based environments (Arch, Ubuntu, Kali) and actively build practical knowledge in networking, system administration, and security tooling. I&#39;m particularly drawn to how operating systems, network layers, and services interact from a defender&#39;s perspective.</p>
+                                      <p id="about-me-p3">Long-term, I want to specialize in security operations, incident detection &amp; response, and infrastructure protection &mdash; environments where reliability, visibility, and system integrity actually matter.</p>
+                                </div>
+                            </div>
+
+                            <aside class="quick-facts reveal reveal-delay-1">
+                                <h6 id="qf-title">Quick Facts</h6>
+
+                                <div class="fact-row">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <div>
+                                        <strong id="qf-edu-label">MEF University</strong>
+                                        <span class="fact-sub" id="qf-edu-sub">BSc Computer Engineering &middot; 2024&ndash;2028</span>
+                                    </div>
+                                </div>
+
+                                <div class="fact-row">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <div>
+                                        <strong id="qf-focus-label">Focus</strong>
+                                        <span class="fact-sub" id="qf-focus-sub">Blue Team &middot; IT Infrastructure</span>
+                                    </div>
+                                </div>
+
+                                <div class="fact-row">
+                                    <i class="fa-brands fa-linux"></i>
+                                    <div>
+                                        <strong id="qf-daily-label">Daily Driver</strong>
+                                        <span class="fact-sub" id="qf-daily-sub">Arch Linux &middot; Hyprland &middot; Fish</span>
+                                    </div>
+                                </div>
+
+                                <div class="fact-row">
+                                    <i class="fa-solid fa-book-open"></i>
+                                    <div>
+                                        <strong id="qf-learning-label">Now Learning</strong>
+                                        <span class="fact-sub" id="qf-learning-sub">CompTIA Security+</span>
+                                    </div>
+                                </div>
+
+                                <div class="fact-row">
+                                    <i class="fa-solid fa-language"></i>
+                                    <div>
+                                        <strong id="qf-lang-label">Languages</strong>
+                                        <div class="fact-pill-row" style="margin-top:6px;">
+                                            <span class="fact-pill" id="qf-lang-tr">TR &middot; Native</span>
+                                            <span class="fact-pill" id="qf-lang-en">EN &middot; C1</span>
+                                            <span class="fact-pill" id="qf-lang-jp">JP &middot; Basic</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fact-row">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <div>
+                                        <strong id="qf-status-label">Status</strong>
+                                        <div class="fact-pill-row" style="margin-top:6px;">
+                                            <span class="fact-pill"><span class="pulse-dot"></span><span id="qf-status-value">Open to internships</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
                         </div>
                   </section>
 
-                  <section id="experience" class="experience-section">
+                  <section id="experience" class="experience-section reveal">
                         <section class="experience-title">
                               <div class="mini-line"></div>
                               <h4 id="experience-heading"><b>Experience</b></h4>
@@ -200,19 +275,62 @@
 
                         <div class="experience-timeline">
                               <article class="experience-item current">
-                                    <p id="exp-period-1" class="experience-period">6-MONTH PERIOD</p>
-                                    <h5 id="exp-role-1">Vehicle ECU Coding</h5>
-                                    <p id="exp-company-1" class="experience-company">Hands-on work with automobiles</p>
+                                    <p id="exp-period-1" class="experience-period">MAY &ndash; SEP 2025</p>
+                                    <h5 id="exp-role-1">ECU Technician Intern</h5>
+                                    <p id="exp-company-1" class="experience-company">Edge Tuning &middot; Finike, Antalya &middot; On-site</p>
                                     <ul>
-                                          <li id="exp-bullet-1">Worked on vehicle ECU coding tasks and practical troubleshooting.</li>
-                                          <li id="exp-bullet-2">Learned calibration logic, diagnostics, and workflow discipline.</li>
-                                          <li id="exp-bullet-3">Built hands-on understanding of automotive electronics and control systems.</li>
+                                          <li id="exp-bullet-1">Hands-on automobile ECU coding and customization.</li>
+                                          <li id="exp-bullet-2">Calibration logic, diagnostics, and disciplined workflow.</li>
+                                          <li id="exp-bullet-3">Built practical understanding of automotive electronics and control systems.</li>
                                     </ul>
                               </article>
+
+                              <article class="experience-item">
+                                    <p id="exp-period-2" class="experience-period">INDEPENDENT</p>
+                                    <h5 id="exp-role-2">Technical Support &amp; Systems Assistance</h5>
+                                    <p id="exp-company-2" class="experience-company">Freelance &middot; Remote</p>
+                                    <ul>
+                                          <li id="exp-bullet-2-1">Installed and maintained Linux / Windows / macOS systems.</li>
+                                          <li id="exp-bullet-2-2">Diagnosed hardware, driver, and networking issues end-to-end.</li>
+                                          <li id="exp-bullet-2-3">Custom PC assembly and OS configuration for clients.</li>
+                                    </ul>
+                              </article>
+                        </div>
+
+                        <!-- Training & Hackathons -->
+                        <section class="experience-title" style="margin-top:32px;">
+                              <div class="mini-line"></div>
+                              <h4 id="training-heading"><b>Training &amp; Hackathons</b></h4>
+                        </section>
+
+                        <div class="highlight-stack">
+                            <a href="#" class="highlight-card" id="hl-sibervatan">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <div>
+                                    <h6 id="hl-sv-title">SiberVatan 2026</h6>
+                                    <p id="hl-sv-desc">Kalkınma Ajansı-supported cybersecurity training. Selected via competitive exam, one-on-one instruction. Completed Apr 2026.</p>
+                                </div>
+                            </a>
+
+                            <div class="highlight-card">
+                                <i class="fa-solid fa-rocket"></i>
+                                <div>
+                                    <h6 id="hl-gm-title">GenerativeMedia Komünite Hackathon 2026</h6>
+                                    <p id="hl-gm-desc">Solo &middot; built a generative-media concept under time constraints.</p>
+                                </div>
+                            </div>
+
+                            <div class="highlight-card">
+                                <i class="fa-solid fa-people-group"></i>
+                                <div>
+                                    <h6 id="hl-hb-title">Hepsiburada &amp; Trendyol Hackathons</h6>
+                                    <p id="hl-hb-desc">Team (2&ndash;3) &middot; recommendation &amp; learning-to-rank problems.</p>
+                                </div>
+                            </div>
                         </div>
                   </section>
             </div>
     </main>
-    <script src="function.js?v=20260216"></script>
+    <script src="function.js?v=20260520"></script>
 </body>
 </html>
