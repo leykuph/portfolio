@@ -70,11 +70,17 @@ updateToggleButton();
       qfLearningSub: "CompTIA Security+",
       qfLangLabel: "Languages",
       qfStatusLabel: "Status",
-      qfStatusValue: "Open to internships",
+      qfStatusValue: "Working",
       dividerSkills: "Stack",
       dividerProfile: "Profile",
       skillsHeading: "Skills",
       experienceTitle: "Experience",
+      expPeriod0: "JUL 2026 – PRESENT",
+      expRole0: "Cyber Threat Intelligence Intern",
+      expCompany0: "Brandefense · Ankara, Türkiye · Remote",
+      expBullet01: "Tracking threat actors, campaigns, and emerging TTPs across intelligence sources.",
+      expBullet02: "Supporting dark web and brand protection monitoring workflows.",
+      expBullet03: "Contributing to threat intelligence reports and actionable findings.",
       expPeriod1: "MAY – SEP 2025",
       expRole1: "ECU Technician Intern",
       expCompany1: "Edge Tuning · Finike, Antalya · On-site",
@@ -160,11 +166,17 @@ updateToggleButton();
       qfLearningSub: "CompTIA Security+",
       qfLangLabel: "Diller",
       qfStatusLabel: "Durum",
-      qfStatusValue: "Stajlara açık",
+      qfStatusValue: "Çalışıyor",
       dividerSkills: "Stack",
       dividerProfile: "Profil",
       skillsHeading: "Yetenekler",
       experienceTitle: "Deneyim",
+      expPeriod0: "TEMMUZ 2026 – HALEN",
+      expRole0: "Siber Tehdit İstihbaratı Stajyeri",
+      expCompany0: "Brandefense · Ankara, Türkiye · Uzaktan",
+      expBullet01: "Tehdit aktörleri, kampanyalar ve yeni TTP'lerin istihbarat kaynakları üzerinden takibi.",
+      expBullet02: "Dark web ve marka koruma izleme süreçlerine destek.",
+      expBullet03: "Tehdit istihbaratı raporlarına ve aksiyon alınabilir bulgulara katkı.",
       expPeriod1: "MAYIS – EYLÜL 2025",
       expRole1: "ECU Teknisyen Stajyeri",
       expCompany1: "Edge Tuning · Finike, Antalya · Yerinde",
@@ -250,11 +262,17 @@ updateToggleButton();
       qfLearningSub: "CompTIA Security+",
       qfLangLabel: "言語",
       qfStatusLabel: "ステータス",
-      qfStatusValue: "インターンシップ募集中",
+      qfStatusValue: "就業中",
       dividerSkills: "スタック",
       dividerProfile: "プロフィール",
       skillsHeading: "スキル",
       experienceTitle: "経験",
+      expPeriod0: "2026年7月 – 現在",
+      expRole0: "サイバー脅威インテリジェンス インターン",
+      expCompany0: "Brandefense · アンカラ、トルコ · リモート",
+      expBullet01: "脅威アクター、キャンペーン、新たなTTPをインテリジェンスソース全体で追跡。",
+      expBullet02: "ダークウェブおよびブランド保護モニタリング業務の支援。",
+      expBullet03: "脅威インテリジェンスレポートと実用的な知見への貢献。",
       expPeriod1: "2025年5月 – 9月",
       expRole1: "ECU技術インターン",
       expCompany1: "Edge Tuning · フィニケ、アンタルヤ · オンサイト",
@@ -360,6 +378,12 @@ updateToggleButton();
     setText('divider-profile', t.dividerProfile);
     setText('skills-heading', t.skillsHeading);
     setText('experience-heading', t.experienceTitle);
+    setText('exp-period-0', t.expPeriod0);
+    setText('exp-role-0', t.expRole0);
+    setText('exp-company-0', t.expCompany0);
+    setText('exp-bullet-0-1', t.expBullet01);
+    setText('exp-bullet-0-2', t.expBullet02);
+    setText('exp-bullet-0-3', t.expBullet03);
     setText('exp-period-1', t.expPeriod1);
     setText('exp-role-1', t.expRole1);
     setText('exp-company-1', t.expCompany1);

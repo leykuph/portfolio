@@ -193,15 +193,16 @@ a { color: var(--link); }
             <span class="sep">|</span>
             <a href="https://github.com/leykuph">github.com/leykuph</a>
             <span class="sep">|</span>
-            <a href="https://leykuph.github.io/portfolio">leykuph.github.io/portfolio</a>
+            <a href="https://leykuph.com">leykuph.com</a>
         </div>
     </header>
 
     <h2 class="section-title">Profile</h2>
     <p class="lead">
-        Computer Engineering student focused on cybersecurity and IT systems, with hands-on experience in Linux
-        environments, networking, security tooling, and full-stack development. Completed government-backed
-        cybersecurity training (Kalk&#305;nma Ajans&#305; / SiberVatan) ranked Top 80 in Istanbul.
+        Computer Engineering student (MEF University, 2024&ndash;2028) focused on cybersecurity and IT systems, with
+        hands-on experience in Linux environments, networking, security tooling, and full-stack development.
+        Completed government-backed cybersecurity training (Kalk&#305;nma Ajans&#305; / SiberVatan) ranked Top 80 in Istanbul.
+        Currently pursuing CompTIA Security+ (SY0-701).
     </p>
 
     <h2 class="section-title">Education</h2>
@@ -217,12 +218,20 @@ a { color: var(--link); }
 
     <div class="entry">
         <div class="entry-head">
+            <span class="role">Cyber Threat Intelligence Intern</span>
+            <span class="org">&middot; Brandefense</span>
+            <span class="when">July 2026 &ndash; Present &middot; Remote</span>
+        </div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-head">
             <span class="role">ECU Technician Intern</span>
             <span class="org">&middot; Edge Tuning</span>
-            <span class="when">May &ndash; Sep 2025 &middot; Finike, Antalya &middot; On-site</span>
+            <span class="when">May &ndash; Sep 2025 &middot; Antalya</span>
         </div>
         <ul>
-            <li>Hands-on experience with automobile ECU coding and customization.</li>
+            <li>Hands-on experience with automobile ECU systems.</li>
         </ul>
     </div>
 
@@ -237,39 +246,80 @@ a { color: var(--link); }
     </div>
 
     <h2 class="section-title">Technical Skills</h2>
-    <div class="kv"><span class="k">OS:</span> Linux (Arch, Ubuntu, Kali) &middot; Windows &middot; macOS</div>
-    <div class="kv"><span class="k">Programming:</span> Python &middot; JavaScript &middot; Java &middot; Spring Boot &middot; Kotlin &middot; Assembly (MIPS) &middot; HTML/CSS</div>
-    <div class="kv"><span class="k">Networking:</span> TCP/IP &middot; IP addressing &middot; Subnetting &middot; Network security fundamentals</div>
-    <div class="kv"><span class="k">Security:</span> Nmap &middot; Metasploit (basic) &middot; Penetration testing concepts &middot; IT audit (CISA prep)</div>
-    <div class="kv"><span class="k">Tools:</span> Git &middot; numpy &middot; OpenCV &middot; PyTorch &middot; Custom PC assembly</div>
+    <div class="kv"><span class="k">Security:</span> Nmap &middot; Metasploit (basic) &middot; Kali Linux &middot; Pen testing concepts &middot; OWASP &middot; SIEM &middot; IT audit (CISA prep)</div>
+    <div class="kv"><span class="k">Languages:</span> Python &middot; JavaScript &middot; Java &middot; Spring Boot &middot; Kotlin &middot; Assembly (MIPS) &middot; Bash &middot; HTML/CSS</div>
+    <div class="kv"><span class="k">OS &amp; Systems:</span> Arch Linux &middot; Ubuntu &middot; Kali &middot; Windows &middot; macOS &middot; Custom PC assembly</div>
+    <div class="kv"><span class="k">Networking:</span> TCP/IP &middot; IP addressing &middot; Subnetting &middot; DNS &middot; Network security fundamentals</div>
+    <div class="kv"><span class="k">Dev &amp; ML:</span> OpenCV &middot; PyTorch &middot; numpy &middot; JWT auth &middot; Git</div>
+    <div class="kv"><span class="k">PM &amp; Agile:</span> Jira &middot; Scrum &middot; UML &middot; TDD</div>
 
     <h2 class="section-title">Projects</h2>
 
     <div class="entry">
         <div class="entry-head">
+            <span class="project-name">Secure Full-Stack Web Application</span>
+            <span class="org">&mdash; Solo &middot; Java &middot; Spring Boot &middot; JWT &middot; HTML/CSS/JS</span>
+        </div>
+        <ul>
+            <li>JWT-authenticated full-stack app built independently from design to deployment, applying security best practices throughout.</li>
+        </ul>
+    </div>
+
+    <div class="entry">
+        <div class="entry-head">
+            <span class="project-name">Home Lab | Security Monitoring Stack</span>
+            <span class="org">&mdash; Solo &middot; Suricata &middot; Loki &middot; Grafana &middot; Promtail &middot; nftables</span>
+        </div>
+        <ul>
+            <li>Built a personal SOC lab on Arch Linux: Suricata IDS with custom detection rules, log aggregation via Loki/Promtail, GeoIP enrichment with MaxMind, and Grafana dashboards for real-time network monitoring.</li>
+        </ul>
+    </div>
+
+    <div class="entry">
+        <div class="entry-head">
             <span class="project-name">Deep-Vision</span>
-            <span class="org">&mdash; Python &middot; OpenCV &middot; PyTorch &middot; Real-Time Computer Vision</span>
+            <span class="org">&mdash; Team &middot; Python &middot; OpenCV &middot; PyTorch</span>
         </div>
         <ul>
             <li>Distance-invariant facial recognition system: two-phase pipeline (dataset creation &rarr; real-time detection at 30+ FPS).</li>
-            <li>Targets &gt;85% accuracy under varied lighting / low-resolution conditions via robust feature extraction.</li>
+            <li>Targets &gt;85% accuracy under varied lighting / low-resolution conditions.</li>
+        </ul>
+    </div>
+
+    <div class="entry">
+        <div class="entry-head">
+            <span class="project-name">8-Bit CPU Simulation</span>
+            <span class="org">&mdash; Team &middot; Low-level &middot; Hardware</span>
+        </div>
+        <ul>
+            <li>Designed and simulated a basic 8-bit CPU covering registers, instruction handling, and control logic.</li>
         </ul>
     </div>
 
     <div class="entry">
         <div class="entry-head">
             <span class="project-name">Tetris 2048</span>
-            <span class="org">&mdash; Python &middot; OOP &middot; numpy &middot; pygame &middot; Team: Shamaab</span>
+            <span class="org">&mdash; Team &middot; Python &middot; pygame &middot; numpy</span>
         </div>
         <ul>
-            <li>Hybrid game (Tetris + 2048) on a 20&times;12 grid with chain-merge logic, hard drop, DAS held-key movement, and next-piece preview.</li>
+            <li>Hybrid game on a 20&times;12 grid with chain-merge logic, hard drop, DAS held-key movement, and next-piece preview.</li>
+        </ul>
+    </div>
+
+    <div class="entry">
+        <div class="entry-head">
+            <span class="project-name">Floor is Lava</span>
+            <span class="org">&mdash; Team &middot; Assembly &middot; MIPS</span>
+        </div>
+        <ul>
+            <li>2D game in MIPS Assembly, applying low-level hardware and memory management concepts.</li>
         </ul>
     </div>
 
     <div class="entry">
         <div class="entry-head">
             <span class="project-name">COMP302 AI Tutor</span>
-            <span class="org">&mdash; Python</span>
+            <span class="org">&mdash; Team &middot; Python</span>
         </div>
         <ul>
             <li>Tutoring assistant built for the Software Engineering course.</li>
@@ -278,37 +328,13 @@ a { color: var(--link); }
 
     <div class="entry">
         <div class="entry-head">
-            <span class="project-name">Secure Full-Stack Web Application</span>
-            <span class="org">&mdash; Java &middot; Spring Boot &middot; HTML/CSS/JS</span>
+            <span class="project-name">Discord Automation Bot</span>
+            <span class="org">&mdash; Solo &middot; JavaScript</span>
         </div>
         <ul>
-            <li>JWT-authenticated full-stack app built independently from design to deployment, applying security best practices.</li>
+            <li>Automated Discord workflows and server management tasks.</li>
         </ul>
     </div>
-
-    <div class="entry">
-        <div class="entry-head">
-            <span class="project-name">8-Bit CPU Simulation</span>
-        </div>
-        <ul>
-            <li>Designed and simulated a basic 8-bit CPU: registers, instruction handling, and control logic.</li>
-        </ul>
-    </div>
-
-    <div class="entry">
-        <div class="entry-head">
-            <span class="project-name">Floor is Lava</span>
-            <span class="org">&mdash; Assembly &middot; MIPS</span>
-        </div>
-        <ul>
-            <li>2D game written in MIPS Assembly, applying low-level hardware and memory management concepts.</li>
-        </ul>
-    </div>
-
-    <p class="muted" style="margin:6px 0 0;">
-        <strong>Other:</strong> Discord Automation Bot (JS) &middot; Minecraft Modification (JS) &middot;
-        Portfolio Website (HTML/CSS/JS) &middot; Generative Interior Design AI (Concept)
-    </p>
 
     <h2 class="section-title">Hackathons</h2>
     <div class="entry">
@@ -334,10 +360,11 @@ a { color: var(--link); }
         <p class="muted" style="margin:2px 0 0;">Selected via competitive exam &middot; Ranked Top 80 in Istanbul &middot; One-on-one instruction</p>
     </div>
 
-    <h2 class="section-title">Licenses &amp; Certifications</h2>
+    <h2 class="section-title">Certifications</h2>
 
     <p class="subsection-title">Cybersecurity</p>
     <p class="training-line">
+        CompTIA Security+ SY0-701 <span class="highlight">(In Progress)</span> &middot;
         Foundations of Cybersecurity <span class="muted">(Google, Oct 2024)</span> &middot;
         Play It Safe: Manage Security Risks <span class="muted">(Google, Nov 2024)</span> &middot;
         Connect and Protect: Networks &amp; Security <span class="muted">(Google, Feb 2025)</span> &middot;
