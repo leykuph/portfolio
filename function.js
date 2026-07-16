@@ -1,4 +1,3 @@
-
 // Mobile nav toggle
 function toggleMobileNav() {
   const nav = document.getElementById('mySidenav');
@@ -13,6 +12,7 @@ function toggleMobileNav() {
     btn.innerHTML = isOpen
       ? '<i class="fa-solid fa-xmark"></i>'
       : '<i class="fa-solid fa-bars"></i>';
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
 }
 
@@ -20,22 +20,91 @@ function toggleMobileNav() {
 function updateToggleButton() {
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
-  const isLight = document.body.classList.contains('light-theme');
+  const isLight = document.documentElement.classList.contains('light-theme');
   btn.innerHTML = isLight
     ? '<i class="fa-solid fa-sun"></i>'
     : '<i class="fa-solid fa-moon"></i>';
+  btn.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
 }
 
 function toggleTheme() {
-  const isLight = document.body.classList.toggle('light-theme');
+  const isLight = document.documentElement.classList.toggle('light-theme');
   localStorage.setItem('siteTheme', isLight ? 'light' : 'dark');
   updateToggleButton();
 }
 
 const themeSaved = localStorage.getItem('siteTheme');
-if (themeSaved === 'light') {
-  document.body.classList.add('light-theme');
+if (themeSaved === 'light' || (!themeSaved && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+  document.documentElement.classList.add('light-theme');
 }
+updateToggleButton();
+
+// =====================================================
+// Sidenav builder (keeps nav markup DRY across pages)
+// =====================================================
+const NAV_LINKS = [
+  { href: '/', icon: 'fa-house', id: 'nav-home', label: 'Main Page' },
+  { href: '/certificates', icon: 'fa-graduation-cap', id: 'nav-cert', label: 'Certifications' },
+  { href: '/projects', icon: 'fa-file', id: 'nav-projects', label: 'Projects' }
+];
+
+function buildSidenav() {
+  const nav = document.getElementById('mySidenav');
+  if (!nav) return;
+  const here = (location.pathname.replace(/\/+$/, '') || '/').toLowerCase();
+
+  const link = ({ href, icon, id, label }) => {
+    const h = (href.replace(/\/+$/, '') || '/').toLowerCase();
+    const active = h === here;
+    return `<a href="${href}"${active ? ' class="sidenav-active" aria-current="page"' : ''}><i class="fa-solid ${icon}"></i><span id="${id}">${label}</span></a>`;
+  };
+
+  nav.innerHTML =
+    NAV_LINKS.map(link).join('') +
+    `<div class="sidenav-bottom">
+       <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle color theme">
+         <i class="fa-solid fa-moon"></i>
+       </button>
+       <div class="lang-dropdown">
+         <button class="lang-dropdown-btn" onclick="toggleLangDropdown()" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+           <i class="fa-solid fa-globe"></i>
+           <span class="lang-label">English</span>
+           <i class="fa-solid fa-chevron-down lang-arrow"></i>
+         </button>
+         <div class="lang-dropdown-menu" role="listbox">
+           <button class="lang-option active-lang" data-lang="en" role="option"><span class="lang-dot"></span>English</button>
+           <button class="lang-option" data-lang="tr" role="option"><span class="lang-dot"></span>Türkçe</button>
+           <button class="lang-option" data-lang="jp" role="option"><span class="lang-dot"></span>日本語</button>
+         </div>
+       </div>
+     </div>`;
+}
+
+// =====================================================
+// Skill carousel builder (seamless infinite scroll = 3 copies)
+// =====================================================
+const SKILLS = [
+  { src: '/images/html.webp', alt: 'HTML logo', label: 'HTML' },
+  { src: '/images/C.webp', alt: 'C logo', label: 'C' },
+  { src: '/images/java.webp', alt: 'Java logo', label: 'Java' },
+  { src: '/images/js.webp', alt: 'JavaScript logo', label: 'JavaScript' },
+  { src: '/images/csharp.webp', alt: 'C# logo', label: 'C#' },
+  { src: '/images/python.webp', alt: 'Python logo', label: 'Python' },
+  { src: '/images/swift.webp', alt: 'Swift logo', label: 'Swift' },
+  { src: '/images/Bash.webp', alt: 'Bash logo', label: 'Bash' }
+];
+
+function buildSkillCards() {
+  const track = document.querySelector('.skills-section .track');
+  if (!track) return;
+  const card = s => `<div class="card"><img loading="lazy" src="${s.src}" alt="${s.alt}" width="50" height="50"><span>${s.label}</span></div>`;
+  const oneSet = SKILLS.map(card).join('');
+  track.innerHTML = oneSet + oneSet + oneSet;
+}
+
+// Build nav + skills early so language listeners can attach to the generated nodes
+buildSidenav();
+buildSkillCards();
 updateToggleButton();
 
 
@@ -101,7 +170,7 @@ updateToggleButton();
       hlHbTitle: "Hepsiburada & Trendyol Hackathons",
       hlHbDesc: "Team (2–3) · recommendation & learning-to-rank problems.",
       projectHeading: "Featured Projects",
-      projectDesc1: "An AI-powered interior design app that generates room concepts from user prompts. It combines generation, style presets, and user feedback to iterate designs quickly.",
+      projectDesc1: "An AI-powered interior design application that generates photorealistic room redesigns based on user uploaded photos and style preferences.",
       projectDesc2: "A secure, full-stack web application featuring Spring Boot for the backend and a modern HTML/CSS/JS frontend. It implements JWT-based authentication with a premium, responsive UI.",
       projectDesc3: "A machine learning project predicting customer churn using Random Forest and XGBoost with feature selection strategies (RFE, feature importance). Reduces 1,163 features to 23 while preserving performance, evaluated with MCC and F1-Score under class imbalance.",
       projectDesc4: "A Java application that finds shortest paths between 17 Turkish cities using DFS, DFS-Shortest, and Dijkstra algorithms. Features an interactive Swing GUI and a benchmarking module with custom data structures (stack, dictionary) built from scratch.",
@@ -131,6 +200,7 @@ updateToggleButton();
       projectsPageHeading: 'Featured <span class="text-primary">Projects</span>',
       projectsPageDesc: "A collection of works ranging from AI integrations to secure full-stack web applications, showcasing my journey in computer engineering.",
       footerText: "Looking for more? I have dozens of smaller repositories, experiments, and technical notes.",
+      footerRights: "All rights reserved.",
       githubBtn: '<i class="fa-brands fa-github"></i> View all projects on GitHub',
       notFoundTitle: "Looks like this page got hardened out of existence.",
       notFoundDesc: "The URL you tried doesn't match any route on this site. It might've moved, or it may have never existed in the first place.",
@@ -227,6 +297,7 @@ updateToggleButton();
       projectsPageHeading: 'Öne Çıkan <span class="text-primary">Projeler</span>',
       projectsPageDesc: "Yapay zeka entegrasyonlarından güvenli tam yığın web uygulamalarına kadar uzanan, bilgisayar mühendisliği yolculuğumu sergileyen bir çalışma koleksiyonu.",
       footerText: "Daha fazlasını mı arıyorsunuz? Onlarca küçük depom, deneyim ve teknik notum var.",
+      footerRights: "Tüm hakları saklıdır.",
       githubBtn: '<i class="fa-brands fa-github"></i> GitHub\'daki tüm projeleri görün',
       notFoundTitle: "Bu sayfa sıkılaştırma sırasında kaybolmuş gibi görünüyor.",
       notFoundDesc: "Girdiğin URL bu sitede hiçbir rotaya uymuyor. Taşınmış olabilir ya da hiç var olmamış olabilir.",
@@ -323,6 +394,7 @@ updateToggleButton();
       projectsPageHeading: '注目の <span class="text-primary">プロジェクト</span>',
       projectsPageDesc: "AI統合から安全なフルスタックWebアプリケーションまで、コンピューター工学における私の歩みを示す作品集です。",
       footerText: "もっと見たいですか？何十もの小さなリポジトリ、実験、技術ノートがあります。",
+      footerRights: "無断複製を禁じます。",
       githubBtn: '<i class="fa-brands fa-github"></i> GitHubですべてのプロジェクトを表示',
       notFoundTitle: "このページはハードニング中に消えてしまったようです。",
       notFoundDesc: "入力したURLはこのサイトのどのルートにも一致しません。移動したか、最初から存在しなかった可能性があります。",
@@ -337,6 +409,7 @@ updateToggleButton();
     const t = translations[lang];
     if (!t) return;
     currentLang = lang;
+    document.documentElement.lang = lang === 'jp' ? 'ja' : lang;
 
     const setText = (id, value) => {
       const el = document.getElementById(id);
@@ -350,7 +423,6 @@ updateToggleButton();
     setText('nav-cert', t.navCert);
     setText('nav-home', t.navHome);
     setText('nav-projects', t.navProjects);
-    setText('nav-contact', t.navContact);
     const heroHeading = document.getElementById('hero-heading');
     if (heroHeading) {
       heroHeading.innerHTML = `${t.heroHeading} <span class="text-primary" id="name">${t.name}</span>`;
@@ -462,13 +534,19 @@ updateToggleButton();
   const langNames = { en: 'English', tr: 'Türkçe', jp: '日本語' };
 
   function toggleLangDropdown() {
-    document.querySelector('.lang-dropdown').classList.toggle('open');
+    const dropdown = document.querySelector('.lang-dropdown');
+    if (!dropdown) return;
+    const open = dropdown.classList.toggle('open');
+    const btn = dropdown.querySelector('.lang-dropdown-btn');
+    if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
 
   document.addEventListener('click', (e) => {
     const dropdown = document.querySelector('.lang-dropdown');
     if (dropdown && !dropdown.contains(e.target)) {
       dropdown.classList.remove('open');
+      const btn = dropdown.querySelector('.lang-dropdown-btn');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
     }
   });
 
@@ -484,7 +562,10 @@ updateToggleButton();
       if (label) label.textContent = langNames[lang] || lang;
 
       switchLanguage(lang);
-      document.querySelector('.lang-dropdown').classList.remove('open');
+      const dropdown = document.querySelector('.lang-dropdown');
+      dropdown.classList.remove('open');
+      const btn = dropdown.querySelector('.lang-dropdown-btn');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -599,6 +680,61 @@ function restartTypewriter(phrases) {
     });
   }
 })();
+
+
+// =====================================================
+// Footer + back-to-top builder
+// =====================================================
+const FOOTER_SOCIAL = [
+  { href: 'https://www.linkedin.com/in/leykuph/', icon: 'fa-brands fa-linkedin', label: 'LinkedIn' },
+  { href: 'https://github.com/leykuph', icon: 'fa-brands fa-github', label: 'GitHub' },
+  { href: 'mailto:leykuph@gmail.com', icon: 'fa-solid fa-envelope', label: 'Email' },
+  { href: 'https://x.com/leykuph', icon: 'fa-brands fa-x-twitter', label: 'X (Twitter)' },
+  { href: 'https://www.instagram.com/leykuph/', icon: 'fa-brands fa-instagram', label: 'Instagram' }
+];
+
+function buildFooter() {
+  if (document.querySelector('.site-footer')) return;
+  const main = document.querySelector('main');
+  const footer = document.createElement('footer');
+  footer.className = 'site-footer reveal';
+  const year = new Date().getFullYear();
+  footer.innerHTML =
+    `<div class="footer-inner">
+       <div class="footer-brand">Bedirhan</div>
+       <div class="footer-social">
+         ${FOOTER_SOCIAL.map(s => `<a href="${s.href}" target="_blank" rel="noopener noreferrer" aria-label="${s.label}"><i class="${s.icon}"></i></a>`).join('')}
+       </div>
+       <div class="footer-copy">&copy; ${year} Bedirhan. <span id="footer-rights">All rights reserved.</span></div>
+     </div>`;
+  if (main && main.parentNode) {
+    main.parentNode.insertBefore(footer, main.nextSibling);
+  } else {
+    document.body.appendChild(footer);
+  }
+  const rights = document.getElementById('footer-rights');
+  if (rights) rights.textContent = (translations[currentLang] && translations[currentLang].footerRights) || 'All rights reserved.';
+}
+
+function setupBackToTop() {
+  if (document.getElementById('back-to-top')) return;
+  const btn = document.createElement('button');
+  btn.id = 'back-to-top';
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+  document.body.appendChild(btn);
+
+  const onScroll = () => {
+    btn.classList.toggle('visible', window.scrollY > 600);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  onScroll();
+}
+
+buildFooter();
+setupBackToTop();
 
 
 // =====================================================

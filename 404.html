@@ -4,51 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>404 &middot; Page not found | Bedirhan</title>
+    <meta name="description" content="The page you were looking for could not be found.">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#1A1626" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#F4EFF8" media="(prefers-color-scheme: light)">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="/styles.css?v=20260520">
+    <link rel="stylesheet" href="/styles.css?v=20260717">
 
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>404 &middot; Page not found | Bedirhan</title>
+    <script>
+      (function(){
+        var t = localStorage.getItem('siteTheme');
+        if (t === 'light' || (!t && matchMedia('(prefers-color-scheme: light)').matches)) {
+          document.documentElement.classList.add('light-theme');
+        }
+      })();
+    </script>
 </head>
 <body>
 
-    <button class="menu-btn" onclick="toggleMobileNav()">
+    <button class="menu-btn" onclick="toggleMobileNav()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mySidenav">
         <i class="fa-solid fa-bars"></i>
     </button>
     <div class="sidenav-overlay" onclick="toggleMobileNav()"></div>
 
-    <!-- SIDENAV -->
-    <div id="mySidenav" class="sidenav">
-          <a href="/"><i class="fa-solid fa-house"></i><span id="nav-home">Main Page</span></a>
-          <a href="/certificates"><i class="fa-solid fa-graduation-cap"></i><span id="nav-cert">Certifications</span></a>
-          <a href="/projects"><i class="fa-solid fa-file"></i><span id="nav-projects">Projects</span></a>
-          <div class="sidenav-bottom">
-              <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
-                <i class="fa-solid fa-moon"></i>
-              </button>
-              <div class="lang-dropdown">
-                  <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
-                      <i class="fa-solid fa-globe"></i>
-                      <span class="lang-label">English</span>
-                      <i class="fa-solid fa-chevron-down lang-arrow"></i>
-                  </button>
-                  <div class="lang-dropdown-menu">
-                      <button class="lang-option active-lang" data-lang="en">
-                          <span class="lang-dot"></span>English
-                      </button>
-                      <button class="lang-option" data-lang="tr">
-                          <span class="lang-dot"></span>Türkçe
-                      </button>
-                      <button class="lang-option" data-lang="jp">
-                          <span class="lang-dot"></span>日本語
-                      </button>
-                  </div>
-              </div>
-          </div>
-    </div>
+    <!-- SIDENAV (populated by function.js) -->
+    <div id="mySidenav" class="sidenav"></div>
 
     <main class="not-found-page">
         <div class="not-found-content reveal">
@@ -67,6 +54,6 @@
         </div>
     </main>
 
-    <script src="/function.js?v=20260520"></script>
+    <script src="/function.js?v=20260717"></script>
 </body>
 </html>
